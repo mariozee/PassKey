@@ -34,7 +34,7 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(168, 39);
+            this.metroButton1.Location = new System.Drawing.Point(380, 39);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(75, 23);
             this.metroButton1.TabIndex = 0;
@@ -44,7 +44,7 @@
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(249, 39);
+            this.metroButton2.Location = new System.Drawing.Point(290, 39);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(75, 23);
             this.metroButton2.TabIndex = 1;
@@ -56,11 +56,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 400);
+            this.ClientSize = new System.Drawing.Size(800, 500);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "PassKey";
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.ResumeLayout(false);
 
         }

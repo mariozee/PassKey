@@ -14,22 +14,28 @@ namespace PassKey
 {
     public partial class MainForm : MetroForm
     {
-        private UserControl1 a;
+        private LoginPanel a;
 
         public MainForm()
         {
-            InitializeComponent();
-            a = new UserControl1(this, this.Width, this.Height - 100, 0, 100, -this.Width, 100, "Left", 1000, 0, -this.Width);
+           InitializeComponent();
+                      
         }
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            a = new UserControl1(this, this.Width, this.Height - 100, 0, 100, -this.Width, 100, "Left", 1000, 0, -this.Width);   
+            a = new LoginPanel(this, 0, 80, -this.Width, 80, "Left", 1000, 0, -this.Width);   
             a.Swipe(true);
         }
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
             a.Swipe(false);
+        }
+
+        private void MainForm_Shown(object sender, EventArgs e)
+        {
+            a = new LoginPanel(this, 0, 80, -this.Width, 80, "Left", 500, 0, -this.Width);
+            a.Swipe(true);
         }
     }
 }

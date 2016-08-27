@@ -1,32 +1,33 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using MetroFramework.Controls;
 using Transitions;
+using MetroFramework.Controls;
 
 namespace PassKey.Sliders
 {
-    public partial class AbstractSlider : MetroUserControl
+    [TypeDescriptionProvider(typeof(AbstractControlDescriptionProvider<AbstractSlider, MetroUserControl>))]
+    public abstract class AbstractSlider : MetroUserControl
     {
-        protected bool loaded;
-        protected Form mainForm;
-        protected int width;
-        protected int height;
-        protected int yOpen;
-        protected int xOpen;
-        protected int xClosed;
-        protected int yClosed;
-        protected string transitionDirection;
-        protected int tranAcceleration;
-        protected int destinationOpen;
-        protected int destinationClosed;
+        private bool loaded;
+        private Form mainForm;
+        private int yOpen;
+        private int xOpen;
+        private int xClosed;
+        private int yClosed;
+        private string transitionDirection;
+        private int tranAcceleration;
+        private int destinationOpen;
+        private int destinationClosed;
 
-        public AbstractSlider()
-        {
-            //this.InitializeComponent();
-        }
-
-        public AbstractSlider(Form form
-            , int width, int height, int xOpen, int yOpen, int xClosed
+        protected AbstractSlider(Form form
+            , int xOpen, int yOpen, int xClosed
             , int yClosed, string transitionDirection, int tranAcceleration
             , int destinationOpen, int destinationClosed)
         {
@@ -35,8 +36,6 @@ namespace PassKey.Sliders
             this.loaded = false;
 
             this.mainForm = form;
-            this.width = width;
-            this.height = height;
             this.xOpen = xOpen;
             this.yOpen = yOpen;
             this.xClosed = xClosed;
@@ -49,14 +48,11 @@ namespace PassKey.Sliders
             this.mainForm.Controls.Add(this);
             this.BringToFront();
 
-            ResizePanel();
+            LocalizePanel();
         }
 
-        protected void ResizePanel()
+        protected void LocalizePanel()
         {
-            this.Width = this.width;
-            this.Height = this.height;
-
             int x = this.loaded ? xOpen : xClosed;
             int y = this.loaded ? yOpen : yClosed;
             this.Location = new Point(x, y);
@@ -86,7 +82,7 @@ namespace PassKey.Sliders
             else
             {
                 this.loaded = true;
-                this.ResizePanel();
+                this.LocalizePanel();
             }
         }
     }

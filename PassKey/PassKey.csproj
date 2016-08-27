@@ -61,23 +61,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sliders\AbstractSlider.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Sliders\AbstractSlider.Designer.cs">
-      <DependentUpon>AbstractSlider.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Sliders\AbstractControlDescriptionProvider.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sliders\UserControl1.cs">
+    <Compile Include="Sliders\AbstractSlider.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Sliders\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="Sliders\LoginPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sliders\LoginPanel.Designer.cs">
+      <DependentUpon>LoginPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,11 +91,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Sliders\AbstractSlider.resx">
-      <DependentUpon>AbstractSlider.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sliders\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="Sliders\LoginPanel.resx">
+      <DependentUpon>LoginPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
