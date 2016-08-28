@@ -27,3 +27,4 @@ D:\Programing\PassKey\PassKey\obj\Debug\PassKey.pdb
 D:\Programing\PassKey\PassKey\obj\Debug\PassKey.Sliders.LoginPanel.resources
 D:\Programing\PassKey\PassKey\obj\Debug\PassKey.Sliders.UserPanel.resources
 D:\Programing\PassKey\PassKey\obj\Debug\PassKey.csprojResolveAssemblyReference.cache
+D:\Programing\PassKey\PassKey\obj\Debug\PassKey.Sliders.MenuSliders.AddMenuPanel.resources

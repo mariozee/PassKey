@@ -27,10 +27,10 @@ namespace PassKey.UsersInputValidators
                 throw new InvalidUsernameException(GlobalMessages.InvalidUsername);
             }
 
-            //if (RegistryData.GetUsernames().Contains(username))
-            //{
-            //    throw new InvalidUsernameException(GlobalMessages.AlreadyTaken);
-            //}
+            if (RegistryData.GetUsernames().Contains(username))
+            {
+                throw new InvalidUsernameException(GlobalMessages.AlreadyTaken);
+            }
 
             if (password != confirmedPassword)
             {

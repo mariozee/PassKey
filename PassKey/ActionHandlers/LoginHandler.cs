@@ -14,9 +14,9 @@ namespace PassKey.ActionHandlers
         private DataParser dataParser;
         private LoggedUser user;
 
-        public LoginHandler(DataParser dataParser)
+        public LoginHandler()
         {
-            this.dataParser = dataParser;
+            this.dataParser = new DataParser();
         }
 
         public LoggedUser Login(string username, string password)

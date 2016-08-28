@@ -30,12 +30,18 @@ namespace PassKey.Sliders
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.menuLabel = new MetroFramework.Controls.MetroLabel();
             this.dataGrid = new MetroFramework.Controls.MetroGrid();
+            this.hostNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userDataInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.addButton = new MetroFramework.Controls.MetroButton();
             this.editButton = new MetroFramework.Controls.MetroButton();
             this.removeButton = new MetroFramework.Controls.MetroButton();
@@ -43,6 +49,7 @@ namespace PassKey.Sliders
             this.chnageButton = new MetroFramework.Controls.MetroButton();
             this.deleteButton = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataInfoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // metroPanel1
@@ -51,9 +58,9 @@ namespace PassKey.Sliders
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(662, 19);
+            this.metroPanel1.Location = new System.Drawing.Point(653, 19);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(1, 363);
+            this.metroPanel1.Size = new System.Drawing.Size(1, 459);
             this.metroPanel1.TabIndex = 1;
             this.metroPanel1.UseCustomBackColor = true;
             this.metroPanel1.VerticalScrollbarBarColor = true;
@@ -65,7 +72,7 @@ namespace PassKey.Sliders
             this.menuLabel.AutoSize = true;
             this.menuLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.menuLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.menuLabel.Location = new System.Drawing.Point(701, 19);
+            this.menuLabel.Location = new System.Drawing.Point(753, 19);
             this.menuLabel.Name = "menuLabel";
             this.menuLabel.Size = new System.Drawing.Size(57, 25);
             this.menuLabel.TabIndex = 2;
@@ -76,19 +83,29 @@ namespace PassKey.Sliders
             // dataGrid
             // 
             this.dataGrid.AllowUserToResizeRows = false;
+            this.dataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGrid.AutoGenerateColumns = false;
             this.dataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.hostNameDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.usernameDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn});
+            this.dataGrid.DataSource = this.userDataInfoBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -100,7 +117,8 @@ namespace PassKey.Sliders
             this.dataGrid.EnableHeadersVisualStyles = false;
             this.dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.dataGrid.Location = new System.Drawing.Point(15, 19);
+            this.dataGrid.Location = new System.Drawing.Point(13, 19);
+            this.dataGrid.MultiSelect = false;
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -113,23 +131,56 @@ namespace PassKey.Sliders
             this.dataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid.Size = new System.Drawing.Size(605, 363);
+            this.dataGrid.Size = new System.Drawing.Size(625, 459);
             this.dataGrid.TabIndex = 3;
             this.dataGrid.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.dataGrid.UseStyleColors = true;
             // 
+            // hostNameDataGridViewTextBoxColumn
+            // 
+            this.hostNameDataGridViewTextBoxColumn.DataPropertyName = "HostName";
+            this.hostNameDataGridViewTextBoxColumn.HeaderText = "Host";
+            this.hostNameDataGridViewTextBoxColumn.Name = "hostNameDataGridViewTextBoxColumn";
+            this.hostNameDataGridViewTextBoxColumn.Width = 140;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.Width = 140;
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            this.usernameDataGridViewTextBoxColumn.Width = 140;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.Width = 140;
+            // 
+            // userDataInfoBindingSource
+            // 
+            this.userDataInfoBindingSource.DataSource = typeof(PassKey.UserInfo.UserDataInfo);
+            // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(692, 66);
+            this.addButton.Location = new System.Drawing.Point(744, 66);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 4;
             this.addButton.Text = "Add";
             this.addButton.UseSelectable = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // editButton
             // 
-            this.editButton.Location = new System.Drawing.Point(692, 117);
+            this.editButton.Location = new System.Drawing.Point(744, 117);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(75, 23);
             this.editButton.TabIndex = 5;
@@ -138,7 +189,7 @@ namespace PassKey.Sliders
             // 
             // removeButton
             // 
-            this.removeButton.Location = new System.Drawing.Point(692, 167);
+            this.removeButton.Location = new System.Drawing.Point(744, 167);
             this.removeButton.Name = "removeButton";
             this.removeButton.Size = new System.Drawing.Size(75, 23);
             this.removeButton.TabIndex = 6;
@@ -147,7 +198,7 @@ namespace PassKey.Sliders
             // 
             // backupButton
             // 
-            this.backupButton.Location = new System.Drawing.Point(692, 221);
+            this.backupButton.Location = new System.Drawing.Point(744, 221);
             this.backupButton.Name = "backupButton";
             this.backupButton.Size = new System.Drawing.Size(75, 23);
             this.backupButton.TabIndex = 7;
@@ -156,7 +207,7 @@ namespace PassKey.Sliders
             // 
             // chnageButton
             // 
-            this.chnageButton.Location = new System.Drawing.Point(692, 276);
+            this.chnageButton.Location = new System.Drawing.Point(744, 276);
             this.chnageButton.Name = "chnageButton";
             this.chnageButton.Size = new System.Drawing.Size(75, 23);
             this.chnageButton.TabIndex = 8;
@@ -165,7 +216,7 @@ namespace PassKey.Sliders
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(692, 336);
+            this.deleteButton.Location = new System.Drawing.Point(744, 336);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(75, 23);
             this.deleteButton.TabIndex = 9;
@@ -186,9 +237,10 @@ namespace PassKey.Sliders
             this.Controls.Add(this.menuLabel);
             this.Controls.Add(this.metroPanel1);
             this.Name = "UserPanel";
-            this.Size = new System.Drawing.Size(800, 400);
+            this.Size = new System.Drawing.Size(900, 500);
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDataInfoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +257,10 @@ namespace PassKey.Sliders
         private MetroFramework.Controls.MetroButton backupButton;
         private MetroFramework.Controls.MetroButton chnageButton;
         private MetroFramework.Controls.MetroButton deleteButton;
+        private BindingSource userDataInfoBindingSource;
+        private DataGridViewTextBoxColumn hostNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
     }
 }

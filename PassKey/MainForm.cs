@@ -26,15 +26,15 @@ namespace PassKey
         }
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            b = new UserPanel(this);
+            //b = new UserPanel(this);
             a.Swipe(false);
-            b.Swipe(true); 
+            //b.Swipe(true); 
         }
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
             a = new LoginPanel(this);
-            b.Swipe(false);
+            //b.Swipe(false);
             a.Swipe(true);
         }
 

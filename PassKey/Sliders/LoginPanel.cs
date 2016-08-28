@@ -9,30 +9,47 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PassKey.UsersInputValidators;
 using PassKey.ActionHandlers;
+using PassKey.Exceptions;
+using PassKey.UserInfo;
 
 namespace PassKey.Sliders
 {
     public partial class LoginPanel : AbstractSlider
     {
-        //this, 0, 80, this.Width, 80, "Left", 500, 0, this.Width);
-        private const int OpenX = 0;
-        private const int OpenY = 80;
-        private const int ClosedX = 800;
-        private const int ClosedY = 80;
-        private const string TransitionDirection = "Left";
-        private const int TransitionAcceleration = 250;
-        private const int DestinationOpen = 0;
-        private const int DestinationClosed = 800;
+        private const int OpenXConst = 0;
+        private const int OpenYConst = 80;
+        private const int ClosedXConst = 900;
+        private const int ClosedYConst = 80;
+        private const string TransitionDirectionConst = "Left";
+        private const int TransitionAccelerationConst = 250;
+        private const int DestinationOpenConst = 0;
+        private const int DestinationClosedConst = 900;
 
-        public LoginPanel(Form form) 
-            : base(form, OpenX, OpenY, ClosedX, ClosedY, TransitionDirection, TransitionAcceleration, DestinationOpen, DestinationClosed)
+        private Form mainForm;
+
+        public LoginPanel(Form form)
+            : base(form, OpenXConst, OpenYConst, ClosedXConst, ClosedYConst, TransitionDirectionConst, TransitionAccelerationConst, DestinationOpenConst, DestinationClosedConst)
         {
             InitializeComponent();
+            this.mainForm = form;
         }
 
         private void logButton_Click(object sender, EventArgs e)
         {
+            LoginHandler logH = new LoginHandler();
+            LoginValidator logV = new LoginValidator();
 
+            try
+            {
+                logV.ValidateInput(this.userNameTextBox.Text, this.passowrdTextBox.Text);
+                LoggedUser user = logH.Login(this.userNameTextBox.Text, this.passowrdTextBox.Text);
+                UserPanel userPanel = new UserPanel(this.MainForm, user);
+                this.Swipe(false);
+                userPanel.Swipe(true);
+            }
+            catch (PassKeyException pke)
+            {
+            }
         }
 
         private void regButton_Click(object sender, EventArgs e)
@@ -40,8 +57,15 @@ namespace PassKey.Sliders
             RegistrationValidator regV = new RegistrationValidator();
             RegistrationHandler regH = new RegistrationHandler();
 
-            regV.ValidateInput(this.userRegTextBox.Text, this.passRegTextBox.Text, this.confirmPassRegTextBox.Text);
-            regH.Register(this.userRegTextBox.Text, this.passRegTextBox.Text);
+            try
+            {
+                regV.ValidateInput(this.userRegTextBox.Text, this.passRegTextBox.Text, this.confirmPassRegTextBox.Text);
+                regH.Register(this.userRegTextBox.Text, this.passRegTextBox.Text);
+            }
+            catch (PassKeyException pke)
+            {
+            }
+
         }
     }
 }

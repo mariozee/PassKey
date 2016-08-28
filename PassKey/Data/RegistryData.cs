@@ -15,11 +15,8 @@ namespace PassKey.Data
 
         public static string[] GetUsernames()
         {
-            string[] usernames = registry
-                .OpenSubKey(Constants.PassKeySubKeyName)
-                .OpenSubKey(Constants.UsersLoginInfoSubKey)
+            string[] usernames = registry.OpenSubKey(Constants.UsersLoginSubKeyPath)
                 .GetValueNames();
-
             registry.Close();
 
             return usernames;
@@ -27,12 +24,8 @@ namespace PassKey.Data
 
         public static string GetUserData(string username)
         {
-            string userData = registry
-                .OpenSubKey(Constants.PassKeySubKeyName)
-                .OpenSubKey(Constants.UsersDataSubKey)
-                .GetValue(username)
-                .ToString();
-
+            string userData = registry.OpenSubKey(Constants.UsersDataSubKeyPath)
+                .GetValue(username).ToString();
             registry.Close();
 
             return userData;
@@ -54,18 +47,14 @@ namespace PassKey.Data
                 .OpenSubKey(Constants.PassKeySubKeyName, true)
                 .OpenSubKey(Constants.UsersLoginInfoSubKey, true)
                 .SetValue(username, password);
-
             registry.Close();
         }
 
         public static string GetUserPassword(string username)
         {
-            string password = registry
-                .OpenSubKey(Constants.PassKeySubKeyName)
-                .OpenSubKey(Constants.UsersLoginInfoSubKey)
+            string password = registry.OpenSubKey(Constants.UsersLoginSubKeyPath)
                 .GetValue(username)
                 .ToString();
-
             registry.Close();
 
             return password;

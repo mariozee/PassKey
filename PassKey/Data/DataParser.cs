@@ -1,33 +1,31 @@
-﻿using System;
+﻿using PassKey.UserInfo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PassKey.Data
 {
     public class DataParser
     {
-        public Dictionary<string, string[]> Parse(string userData)
+        public BindingSource Parse(string userData)
         {
-            Dictionary<string, string[]> data = new Dictionary<string, string[]>();
+            BindingSource parsedData = new BindingSource();
 
-            var splitedByHost = userData.Split(new[] { Constants.HostsSplitChar }, StringSplitOptions.RemoveEmptyEntries);
+            var splitedByHost = userData.Split(new[] { Constants.HostsSplitChar }
+            , StringSplitOptions.RemoveEmptyEntries);
+
             foreach (var info in splitedByHost)
             {
                 string[] splitedInfo = info.Split(Constants.InfoSplitChar);
-                string host = splitedInfo[0];
-                string[] userInfo = new string[3];
-
-                for (int i = 1; i < splitedInfo.Length; i++)
-                {
-                    userInfo[i - 1] = splitedInfo[i];
-                }
-
-                data.Add(host, userInfo);
+                UserDataInfo dataInfo = new UserDataInfo(
+                    splitedInfo[0], splitedInfo[1], splitedInfo[2], splitedInfo[3]);
+                parsedData.Add(dataInfo);
             }
 
-            return data;
+            return parsedData;
         }
     }
 }

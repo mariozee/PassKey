@@ -89,6 +89,15 @@
     <Compile Include="Sliders\LoginPanel.Designer.cs">
       <DependentUpon>LoginPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sliders\MenuSliders\AbstractMenuSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sliders\MenuSliders\AddMenuPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sliders\MenuSliders\AddMenuPanel.Designer.cs">
+      <DependentUpon>AddMenuPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sliders\UserPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,10 +125,14 @@
     <EmbeddedResource Include="Sliders\LoginPanel.resx">
       <DependentUpon>LoginPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sliders\MenuSliders\AddMenuPanel.resx">
+      <DependentUpon>AddMenuPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sliders\UserPanel.resx">
       <DependentUpon>UserPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\PassKey.UserInfo.UserDataInfo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
