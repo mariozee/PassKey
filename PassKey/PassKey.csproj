@@ -61,6 +61,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionHandlers\LoginHandler.cs" />
+    <Compile Include="ActionHandlers\RegistrationHandler.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Data\DataParser.cs" />
+    <Compile Include="Data\RegistryData.cs" />
+    <Compile Include="Exceptions\InvalidHostNameException.cs" />
+    <Compile Include="Exceptions\InvalidPasswordException.cs" />
+    <Compile Include="Exceptions\InvalidUsernameException.cs" />
+    <Compile Include="Exceptions\PassKeyException.cs" />
+    <Compile Include="GlobalMessages.cs" />
+    <Compile Include="SecurityUtilities\CryptographicUtilities.cs" />
+    <Compile Include="SecurityUtilities\HashUtilities.cs" />
     <Compile Include="Sliders\AbstractControlDescriptionProvider.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -77,8 +89,18 @@
     <Compile Include="Sliders\LoginPanel.Designer.cs">
       <DependentUpon>LoginPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sliders\UserPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sliders\UserPanel.Designer.cs">
+      <DependentUpon>UserPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserInfo\LoggedUser.cs" />
+    <Compile Include="UserInfo\UserDataInfo.cs" />
+    <Compile Include="UsersInputValidators\LoginValidator.cs" />
+    <Compile Include="UsersInputValidators\RegistrationValidator.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +115,9 @@
     </Compile>
     <EmbeddedResource Include="Sliders\LoginPanel.resx">
       <DependentUpon>LoginPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sliders\UserPanel.resx">
+      <DependentUpon>UserPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
