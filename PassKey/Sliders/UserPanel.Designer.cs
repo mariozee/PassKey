@@ -186,6 +186,7 @@ namespace PassKey.Sliders
             this.editButton.TabIndex = 5;
             this.editButton.Text = "Edit";
             this.editButton.UseSelectable = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // removeButton
             // 

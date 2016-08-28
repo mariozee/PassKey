@@ -24,23 +24,28 @@ namespace PassKey.Sliders
         private const int DestinationClosed = -900;
 
         private Form mainForm;
+        private LoggedUser user;
 
         public UserPanel(Form form, LoggedUser user) 
             : base(form, OpenX, OpenY, ClosedX, ClosedY, TransitionDirection, TransitionAcceleration, DestinationOpen, DestinationClosed)
         {
             InitializeComponent();
-            this.User = user;
+            this.user = user;
             this.dataGrid.DataSource = user.Data;
             this.dataGrid.Refresh();
             this.mainForm = form;
-        }
-
-        public LoggedUser User { get; set; }
+        }        
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            AddMenuPanel addPanel = new AddMenuPanel(this.mainForm);
+            AddMenuPanel addPanel = new AddMenuPanel(this.mainForm, this.user);
             addPanel.Swipe(true);
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            EditMenuPanel editPanel = new EditMenuPanel(this.mainForm, this.user, this.dataGrid);
+            editPanel.Swipe(true);
         }
     }
 }

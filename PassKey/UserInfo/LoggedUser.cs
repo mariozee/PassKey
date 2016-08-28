@@ -31,17 +31,5 @@ namespace PassKey.UserInfo
         {
             this.Data.RemoveAt(index);
         }
-
-        //public string[] GetHosts()
-        //{
-        //    var hosts = this.UserData.Keys.ToArray();
-        //    return hosts;
-        //}
-
-        //public string[] GetRegInfoByHost(string hostName)
-        //{
-        //    var regInfo = this.UserData[hostName];
-        //    return regInfo;
-        //}
     }
 }

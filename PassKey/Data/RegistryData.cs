@@ -33,11 +33,7 @@ namespace PassKey.Data
 
         public static void SetUserData(string username, string userData)
         {
-            registry
-                .OpenSubKey(Constants.PassKeySubKeyName, true)
-                .OpenSubKey(Constants.UsersDataSubKey, true)
-                .SetValue(username, userData);
-
+            registry.OpenSubKey(Constants.UsersDataSubKeyPath, true).SetValue(username, userData);
             registry.Close();
         }
 

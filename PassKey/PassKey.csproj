@@ -64,7 +64,7 @@
     <Compile Include="ActionHandlers\LoginHandler.cs" />
     <Compile Include="ActionHandlers\RegistrationHandler.cs" />
     <Compile Include="Constants.cs" />
-    <Compile Include="Data\DataParser.cs" />
+    <Compile Include="Data\DataTranslator.cs" />
     <Compile Include="Data\RegistryData.cs" />
     <Compile Include="Exceptions\InvalidHostNameException.cs" />
     <Compile Include="Exceptions\InvalidPasswordException.cs" />
@@ -98,6 +98,12 @@
     <Compile Include="Sliders\MenuSliders\AddMenuPanel.Designer.cs">
       <DependentUpon>AddMenuPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sliders\MenuSliders\EditMenuPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sliders\MenuSliders\EditMenuPanel.Designer.cs">
+      <DependentUpon>EditMenuPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sliders\UserPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sliders\MenuSliders\AddMenuPanel.resx">
       <DependentUpon>AddMenuPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sliders\MenuSliders\EditMenuPanel.resx">
+      <DependentUpon>EditMenuPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sliders\UserPanel.resx">
       <DependentUpon>UserPanel.cs</DependentUpon>
