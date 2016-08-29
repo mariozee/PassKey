@@ -43,5 +43,10 @@ namespace PassKey
             a = new LoginPanel(this);
             a.Swipe(true);          
         }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(1);
+        }
     }
 }

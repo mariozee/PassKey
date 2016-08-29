@@ -45,7 +45,7 @@ namespace PassKey.Sliders
             this.addButton = new MetroFramework.Controls.MetroButton();
             this.editButton = new MetroFramework.Controls.MetroButton();
             this.removeButton = new MetroFramework.Controls.MetroButton();
-            this.backupButton = new MetroFramework.Controls.MetroButton();
+            this.backupRestoreButton = new MetroFramework.Controls.MetroButton();
             this.chnageButton = new MetroFramework.Controls.MetroButton();
             this.deleteButton = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
@@ -196,15 +196,17 @@ namespace PassKey.Sliders
             this.removeButton.TabIndex = 6;
             this.removeButton.Text = "Remove";
             this.removeButton.UseSelectable = true;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
             // backupButton
             // 
-            this.backupButton.Location = new System.Drawing.Point(744, 221);
-            this.backupButton.Name = "backupButton";
-            this.backupButton.Size = new System.Drawing.Size(75, 23);
-            this.backupButton.TabIndex = 7;
-            this.backupButton.Text = "Backup and Restore";
-            this.backupButton.UseSelectable = true;
+            this.backupRestoreButton.Location = new System.Drawing.Point(744, 221);
+            this.backupRestoreButton.Name = "backupButton";
+            this.backupRestoreButton.Size = new System.Drawing.Size(75, 23);
+            this.backupRestoreButton.TabIndex = 7;
+            this.backupRestoreButton.Text = "Backup and Restore";
+            this.backupRestoreButton.UseSelectable = true;
+            this.backupRestoreButton.Click += new System.EventHandler(this.backupRestoreButton_Click);
             // 
             // chnageButton
             // 
@@ -230,7 +232,7 @@ namespace PassKey.Sliders
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.chnageButton);
-            this.Controls.Add(this.backupButton);
+            this.Controls.Add(this.backupRestoreButton);
             this.Controls.Add(this.removeButton);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.addButton);
@@ -255,7 +257,7 @@ namespace PassKey.Sliders
         private MetroFramework.Controls.MetroButton addButton;
         private MetroFramework.Controls.MetroButton editButton;
         private MetroFramework.Controls.MetroButton removeButton;
-        private MetroFramework.Controls.MetroButton backupButton;
+        private MetroFramework.Controls.MetroButton backupRestoreButton;
         private MetroFramework.Controls.MetroButton chnageButton;
         private MetroFramework.Controls.MetroButton deleteButton;
         private BindingSource userDataInfoBindingSource;

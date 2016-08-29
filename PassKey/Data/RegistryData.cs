@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using PassKey.SecurityUtilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -65,34 +66,41 @@ namespace PassKey.Data
             registry.Close();
         }
 
-        public static List<string> PrepareBackup()
-        {
-            var backup = new List<string>();
+        public static string[] GetDataForBackup(string username)
+        {            
+            string logInfo = registry.OpenSubKey(Constants.UsersLoginSubKeyPath).GetValue(username).ToString();
+            string userData = registry.OpenSubKey(Constants.UsersDataSubKeyPath).GetValue(username).ToString();
 
-            string[] subKeyNames = registry.OpenSubKey(Constants.PassKeySubKeyName).GetSubKeyNames();
-            registry.Close();
+            string[] dataForBackup = new string[4];
+            dataForBackup[0] = Constants.BackupMark;
+            dataForBackup[1] = username;
+            dataForBackup[2] = logInfo;
+            dataForBackup[3] = userData;
 
-            foreach (var subKeyName in subKeyNames)
+            byte[] key = ASCIIEncoding.ASCII.GetBytes(Constants.BackupString);
+
+            for (int i = 0; i < dataForBackup.Length; i++)
             {
-                string[] valuesNames = registry.OpenSubKey(Constants.PassKeySubKeyName).OpenSubKey(subKeyName).GetValueNames();
-                registry.Close();
-
-                foreach (var valueName in valuesNames)
-                {
-                    string data = registry.OpenSubKey(Constants.PassKeySubKeyName).OpenSubKey(subKeyName).GetValue(valueName).ToString();
-                    registry.Close();
-
-                    backup.Add(valueName);
-                    backup.Add(data);
-                }
+                dataForBackup[i] = CryptographicUtilities.Encrypt(dataForBackup[i], key);
             }
 
-            return backup;
+            return dataForBackup;
         }
 
-        public static void RestoreBackup(string subKeyName, string username, string data)
+        public static void SetRestoredData(string[] data)
         {
-            registry.OpenSubKey(Constants.PassKeySubKeyName, true).OpenSubKey(subKeyName, true).SetValue(username, data);
+            for (int i = 1; i < data.Length; i++)
+            {
+                data[i] = CryptographicUtilities.Decrypt(data[i], Constants.backUpKey);
+            }
+
+            string username = data[1];
+            string logInfo = data[2];
+            string userData = data[3];
+
+            registry.OpenSubKey(Constants.UsersLoginSubKeyPath, true).SetValue(username, logInfo);
+            registry.Close();
+            registry.OpenSubKey(Constants.UsersDataSubKeyPath, true).SetValue(username, userData);
             registry.Close();
         }
     }

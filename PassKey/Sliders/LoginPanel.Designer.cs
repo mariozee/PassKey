@@ -9,7 +9,7 @@ namespace PassKey.Sliders
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        
+
 
         /// <summary> 
         /// Clean up any resources being used.
@@ -42,6 +42,7 @@ namespace PassKey.Sliders
             this.logingLabel = new MetroFramework.Controls.MetroLabel();
             this.regButton = new MetroFramework.Controls.MetroButton();
             this.logButton = new MetroFramework.Controls.MetroButton();
+            this.restoreLink = new MetroFramework.Controls.MetroLink();
             this.SuspendLayout();
             // 
             // metroPanel1
@@ -275,11 +276,23 @@ namespace PassKey.Sliders
             this.logButton.UseSelectable = true;
             this.logButton.Click += new System.EventHandler(this.logButton_Click);
             // 
+            // restoreLink
+            // 
+            this.restoreLink.Location = new System.Drawing.Point(528, 345);
+            this.restoreLink.Name = "restoreLink";
+            this.restoreLink.Size = new System.Drawing.Size(111, 23);
+            this.restoreLink.TabIndex = 8;
+            this.restoreLink.Text = "Restore account";
+            this.restoreLink.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.restoreLink.UseSelectable = true;
+            this.restoreLink.Click += new System.EventHandler(this.restoreLink_Click);
+            // 
             // LoginPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.restoreLink);
             this.Controls.Add(this.logButton);
             this.Controls.Add(this.regButton);
             this.Controls.Add(this.passowrdTextBox);
@@ -310,5 +323,6 @@ namespace PassKey.Sliders
         private MetroFramework.Controls.MetroLabel logingLabel;
         private MetroFramework.Controls.MetroButton regButton;
         private MetroFramework.Controls.MetroButton logButton;
+        private MetroFramework.Controls.MetroLink restoreLink;
     }
 }

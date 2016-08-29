@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PassKey
 {
-    public class Constants
+    public static class Constants
     {
         //sub keys names
         public const string UsersDataSubKeyPath = "passkey\\usersdata";
@@ -38,6 +38,7 @@ namespace PassKey
 
         //backup encrypt/decrypt
         public const string BackupString = "PassKeyMarioZisovSoftware2016CM3";
-        public byte[] BackupKey = ASCIIEncoding.ASCII.GetBytes(BackupString);
+        public static byte[] backUpKey = ASCIIEncoding.ASCII.GetBytes(BackupString);
+        public const string BackupMark = "PassKeyBackupValidatingMark";
     }
 }

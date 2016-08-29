@@ -26,6 +26,7 @@ namespace PassKey.Sliders
         private const int DestinationClosedConst = 900;
 
         private Form mainForm;
+        private RestorePanel restorePanel;
 
         public LoginPanel(Form form)
             : base(form, OpenXConst, OpenYConst, ClosedXConst, ClosedYConst, TransitionDirectionConst, TransitionAccelerationConst, DestinationOpenConst, DestinationClosedConst)
@@ -66,6 +67,13 @@ namespace PassKey.Sliders
             {
             }
 
+        }
+
+        private void restoreLink_Click(object sender, EventArgs e)
+        {
+            this.Enabled = false;
+            this.restorePanel = new RestorePanel(this.mainForm, this);
+            restorePanel.Swipe(true);
         }
     }
 }

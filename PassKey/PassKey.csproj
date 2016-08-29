@@ -45,6 +45,8 @@
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -59,6 +61,7 @@
     <Reference Include="Transitions">
       <HintPath>C:\Users\Zisov4eto\Desktop\TransitionsSample_1_2\Transitions.dll</HintPath>
     </Reference>
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionHandlers\LoginHandler.cs" />
@@ -98,11 +101,23 @@
     <Compile Include="Sliders\MenuSliders\AddMenuPanel.Designer.cs">
       <DependentUpon>AddMenuPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sliders\MenuSliders\BackupRestoreMenuSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sliders\MenuSliders\BackupRestoreMenuSlider.Designer.cs">
+      <DependentUpon>BackupRestoreMenuSlider.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sliders\MenuSliders\EditMenuPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Sliders\MenuSliders\EditMenuPanel.Designer.cs">
       <DependentUpon>EditMenuPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sliders\RestorePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sliders\RestorePanel.Designer.cs">
+      <DependentUpon>RestorePanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Sliders\UserPanel.cs">
       <SubType>UserControl</SubType>
@@ -134,8 +149,14 @@
     <EmbeddedResource Include="Sliders\MenuSliders\AddMenuPanel.resx">
       <DependentUpon>AddMenuPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sliders\MenuSliders\BackupRestoreMenuSlider.resx">
+      <DependentUpon>BackupRestoreMenuSlider.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sliders\MenuSliders\EditMenuPanel.resx">
       <DependentUpon>EditMenuPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sliders\RestorePanel.resx">
+      <DependentUpon>RestorePanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sliders\UserPanel.resx">
       <DependentUpon>UserPanel.cs</DependentUpon>

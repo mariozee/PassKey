@@ -63,6 +63,7 @@
             this.Style = MetroFramework.MetroColorStyle.Default;
             this.Text = "PassKey";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.ResumeLayout(false);
 
