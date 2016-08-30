@@ -73,7 +73,7 @@
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.FontSize = MetroFramework.MetroLabelSize.Small;
             this.passwordLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.passwordLabel.Location = new System.Drawing.Point(69, 103);
+            this.passwordLabel.Location = new System.Drawing.Point(20, 103);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(95, 15);
             this.passwordLabel.Style = MetroFramework.MetroColorStyle.Red;

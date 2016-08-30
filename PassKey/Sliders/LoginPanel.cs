@@ -108,7 +108,7 @@ namespace PassKey.Sliders
         private void restoreLink_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
-            this.restorePanel = new RestorePanel(this.MainForm);
+            this.restorePanel = new RestorePanel(this.MainForm, this);
             restorePanel.Swipe(true);
         }
 

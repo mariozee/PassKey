@@ -38,6 +38,10 @@ namespace PassKey.Sliders.MenuSliders
             this.passwordTextBox = new MetroFramework.Controls.MetroTextBox();
             this.doneButton = new MetroFramework.Controls.MetroButton();
             this.closeButton = new MetroFramework.Controls.MetroButton();
+            this.hostLabel = new MetroFramework.Controls.MetroLabel();
+            this.usernameLabel = new MetroFramework.Controls.MetroLabel();
+            this.emailLabel = new MetroFramework.Controls.MetroLabel();
+            this.passwordLabel = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // hostNameTextBox
@@ -190,10 +194,62 @@ namespace PassKey.Sliders.MenuSliders
             this.closeButton.UseSelectable = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
+            // hostLabel
+            // 
+            this.hostLabel.AutoSize = true;
+            this.hostLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.hostLabel.Location = new System.Drawing.Point(78, 93);
+            this.hostLabel.Name = "hostLabel";
+            this.hostLabel.Size = new System.Drawing.Size(76, 19);
+            this.hostLabel.TabIndex = 6;
+            this.hostLabel.Text = "Host name";
+            this.hostLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.hostLabel.UseStyleColors = true;
+            // 
+            // usernameLabel
+            // 
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.usernameLabel.Location = new System.Drawing.Point(78, 240);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(71, 19);
+            this.usernameLabel.TabIndex = 7;
+            this.usernameLabel.Text = "Username";
+            this.usernameLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.usernameLabel.UseStyleColors = true;
+            // 
+            // emailLabel
+            // 
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.emailLabel.Location = new System.Drawing.Point(93, 168);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(41, 19);
+            this.emailLabel.TabIndex = 8;
+            this.emailLabel.Text = "Email";
+            this.emailLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.emailLabel.UseStyleColors = true;
+            // 
+            // passwordLabel
+            // 
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.passwordLabel.Location = new System.Drawing.Point(78, 323);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(67, 19);
+            this.passwordLabel.TabIndex = 9;
+            this.passwordLabel.Text = "Password";
+            this.passwordLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.passwordLabel.UseStyleColors = true;
+            // 
             // EditMenuPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.passwordLabel);
+            this.Controls.Add(this.emailLabel);
+            this.Controls.Add(this.usernameLabel);
+            this.Controls.Add(this.hostLabel);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.doneButton);
             this.Controls.Add(this.passwordTextBox);
@@ -204,6 +260,7 @@ namespace PassKey.Sliders.MenuSliders
             this.Size = new System.Drawing.Size(240, 500);
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -215,5 +272,9 @@ namespace PassKey.Sliders.MenuSliders
         private MetroFramework.Controls.MetroTextBox passwordTextBox;
         private MetroFramework.Controls.MetroButton doneButton;
         private MetroFramework.Controls.MetroButton closeButton;
+        private MetroFramework.Controls.MetroLabel hostLabel;
+        private MetroFramework.Controls.MetroLabel usernameLabel;
+        private MetroFramework.Controls.MetroLabel emailLabel;
+        private MetroFramework.Controls.MetroLabel passwordLabel;
     }
 }

@@ -79,24 +79,17 @@
     <Compile Include="GlobalMessages.cs" />
     <Compile Include="SecurityUtilities\CryptographicUtilities.cs" />
     <Compile Include="SecurityUtilities\HashUtilities.cs" />
-    <Compile Include="Sliders\AbstractControlDescriptionProvider.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sliders\AbstractSlider.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Sliders\LoginPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Sliders\LoginPanel.Designer.cs">
       <DependentUpon>LoginPanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Sliders\MenuSliders\AbstractMenuSlider.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Sliders\MenuSliders\AccountDeletePanel.cs">
       <SubType>UserControl</SubType>
@@ -140,6 +133,12 @@
     <Compile Include="Sliders\MenuSliders\EditMenuPanel.Designer.cs">
       <DependentUpon>EditMenuPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sliders\MenuSliders\PasswordPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sliders\MenuSliders\PasswordPanel.Designer.cs">
+      <DependentUpon>PasswordPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sliders\RestorePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -169,6 +168,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Sliders\LoginPanel.resx">
       <DependentUpon>LoginPanel.cs</DependentUpon>
@@ -187,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sliders\MenuSliders\EditMenuPanel.resx">
       <DependentUpon>EditMenuPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sliders\MenuSliders\PasswordPanel.resx">
+      <DependentUpon>PasswordPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sliders\RestorePanel.resx">
       <DependentUpon>RestorePanel.cs</DependentUpon>
@@ -208,6 +211,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteAccout-Enabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteAccount-Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\username.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

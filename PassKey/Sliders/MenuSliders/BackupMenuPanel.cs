@@ -49,6 +49,8 @@ namespace PassKey.Sliders.MenuSliders
                     , MessageBoxButtons.OK
                     , MessageBoxIcon.Information
                     , 80);
+
+                this.Swipe(false);
             }
         }
 

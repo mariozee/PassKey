@@ -49,7 +49,7 @@ namespace PassKey.Sliders.MenuSliders
                     MetroMessageBox.Show(this.MainForm, "", "Password changed successfully!"
                         , MessageBoxButtons.OK, MessageBoxIcon.Information, 80);
 
-                    this.Swipe(true);
+                    this.Swipe(false);
                 }
                 catch (InvalidPasswordLenghtException ipe)
                 {

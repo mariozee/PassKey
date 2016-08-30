@@ -14,6 +14,8 @@ namespace PassKey.Sliders
 {
     public partial class BaseSliderPanel : MetroUserControl
     {
+        public event EventHandler Closed;
+
         public BaseSliderPanel()
         {
             InitializeComponent();
@@ -81,13 +83,14 @@ namespace PassKey.Sliders
             transition.add(this, this.TransitionDirection, destination);
             transition.run();
 
-            while (this.Left != destination)
+            while (this.Left != destination && this.Top != destination)
             {
                 Application.DoEvents();
             }
 
             if (!shown)
             {
+                closed(new EventArgs());
                 this.MainForm.Controls.Remove(this);
                 this.Dispose();
             }
@@ -95,6 +98,15 @@ namespace PassKey.Sliders
             {
                 this.IsLoaded = true;
                 this.LocalizePanel();
+            }
+        }
+
+        protected virtual void closed(EventArgs e)
+        {
+            EventHandler handler = Closed;
+            if (handler != null)
+            {
+                handler(this, e);
             }
         }
     }

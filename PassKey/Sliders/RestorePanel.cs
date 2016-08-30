@@ -17,9 +17,9 @@ namespace PassKey.Sliders
 {
     public partial class RestorePanel : BaseSliderPanel
     {
-        private const int OpenXConst = 450;
+        private const int OpenXConst = 435;
         private const int OpenYConst = 500;
-        private const int ClosedXConst = 450;
+        private const int ClosedXConst = 435;
         private const int ClosedYConst = 600;
         private const string TransitionDirectionConst = "Top";
         private const int TransitionAccelerationConst = 500;
@@ -27,9 +27,9 @@ namespace PassKey.Sliders
         private const int DestinationClosedConst = 600;
 
         private Form mainForm;
-        private BaseSliderPanel loginPanel;
+        private LoginPanel loginPanel;
 
-        public RestorePanel(Form form)
+        public RestorePanel(Form form, LoginPanel loginPanel)
             : base(form, OpenXConst, OpenYConst, ClosedXConst, ClosedYConst, TransitionDirectionConst
                   , TransitionAccelerationConst, DestinationOpenConst, DestinationClosedConst)
         {

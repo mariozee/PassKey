@@ -27,6 +27,7 @@ namespace PassKey.Sliders
         private const int DestinationClosedConst = -900;
 
         private LoggedUser user;
+        private PasswordPanel passowrdPanel;
 
         public UserPanel(Form form, LoggedUser user)
             : base(form, OpenXConst, OpenYConst, ClosedXConst, ClosedYConst, TransitionDirectionConst, TransitionAccelerationConst, DestinationOpenConst, DestinationClosedConst)
@@ -34,8 +35,7 @@ namespace PassKey.Sliders
             InitializeComponent();
             this.user = user;
             this.dataGrid.DataSource = user.Data;
-            this.dataGrid.Refresh();
-            this.SetTopLevel(true);
+            this.ActiveControl = dataGrid;
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -103,6 +103,45 @@ namespace PassKey.Sliders
             LoginPanel loginPanel = new LoginPanel(this.MainForm);
             this.Swipe(false);
             loginPanel.Swipe(true);
+        }
+
+        private void showButton_Click(object sender, EventArgs e)
+        {
+            this.showButton.Enabled = false;
+            this.passowrdPanel = new PasswordPanel(this.MainForm, this.dataGrid);
+            this.passowrdPanel.Closed += PassowrdPanel_Closed;
+            this.passowrdPanel.Swipe(true);           
+        }
+
+        private void PassowrdPanel_Closed(object sender, EventArgs e)
+        {
+            this.showButton.Enabled = true;
+        }
+
+        private void deleteAccountLink_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteAccountLink_MouseEnter(object sender, EventArgs e)
+        {
+            this.deleteAccountLink.UseCustomForeColor = true;
+        }
+
+        private void deleteAccountLink_MouseLeave(object sender, EventArgs e)
+        {
+            this.deleteAccountLink.UseCustomForeColor = false;
+        }
+
+        private void deleteAccountLink_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.deleteAccountLink.UseCustomForeColor = false;
+        }
+
+        private void deleteAccountLink_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.deleteAccountLink.UseCustomForeColor = true;
+            this.deleteAccountLink.Refresh();
         }
     }
 }

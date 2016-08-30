@@ -39,7 +39,7 @@ namespace PassKey.Sliders.MenuSliders
             this.usernameTextBox.Text = username;
             this.passwordTextBox.Text = password;
 
-            this.dataGrid.Enabled = false;      
+            this.dataGrid.Enabled = false;    
         }       
 
         private void doneButton_Click(object sender, EventArgs e)
