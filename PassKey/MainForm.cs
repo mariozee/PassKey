@@ -15,33 +15,17 @@ namespace PassKey
 {
     public partial class MainForm : MetroForm
     {
-        private LoginPanel a;
-        private UserPanel b;
+        private LoginPanel loginPanel;
 
         public MainForm()
         {
            InitializeComponent();
-            //b = new UserPanel(this);
-                      
-        }
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-            //b = new UserPanel(this);
-            a.Swipe(false);
-            //b.Swipe(true); 
-        }
-
-        private void metroButton2_Click(object sender, EventArgs e)
-        {
-            a = new LoginPanel(this);
-            //b.Swipe(false);
-            a.Swipe(true);
+            loginPanel = new LoginPanel(this);
         }
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            a = new LoginPanel(this);
-            a.Swipe(true);          
+            this.loginPanel.Swipe(true);          
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)

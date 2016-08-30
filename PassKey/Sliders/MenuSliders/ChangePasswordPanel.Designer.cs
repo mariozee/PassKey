@@ -37,8 +37,7 @@ namespace PassKey.Sliders.MenuSliders
             this.newPassTextBox = new MetroFramework.Controls.MetroTextBox();
             this.confirmNewPassTextBox = new MetroFramework.Controls.MetroTextBox();
             this.oldPassLabel = new MetroFramework.Controls.MetroLabel();
-            this.newPassLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.newPassLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.newPassLabel = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // changeButton
@@ -167,52 +166,36 @@ namespace PassKey.Sliders.MenuSliders
             this.oldPassLabel.AutoSize = true;
             this.oldPassLabel.FontSize = MetroFramework.MetroLabelSize.Small;
             this.oldPassLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.oldPassLabel.Location = new System.Drawing.Point(59, 95);
+            this.oldPassLabel.Location = new System.Drawing.Point(25, 95);
             this.oldPassLabel.Name = "oldPassLabel";
-            this.oldPassLabel.Size = new System.Drawing.Size(94, 15);
+            this.oldPassLabel.Size = new System.Drawing.Size(58, 15);
             this.oldPassLabel.Style = MetroFramework.MetroColorStyle.Red;
             this.oldPassLabel.TabIndex = 5;
-            this.oldPassLabel.Text = "wrong password";
+            this.oldPassLabel.Text = "error here";
             this.oldPassLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.oldPassLabel.UseStyleColors = true;
             this.oldPassLabel.Visible = false;
             // 
-            // newPassLabel1
-            // 
-            this.newPassLabel1.AutoSize = true;
-            this.newPassLabel1.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.newPassLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.newPassLabel1.Location = new System.Drawing.Point(59, 174);
-            this.newPassLabel1.Name = "newPassLabel1";
-            this.newPassLabel1.Size = new System.Drawing.Size(118, 15);
-            this.newPassLabel1.Style = MetroFramework.MetroColorStyle.Red;
-            this.newPassLabel1.TabIndex = 6;
-            this.newPassLabel1.Text = "passwords mismatch";
-            this.newPassLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.newPassLabel1.UseStyleColors = true;
-            this.newPassLabel1.Visible = false;
-            // 
             // newPassLabel2
             // 
-            this.newPassLabel2.AutoSize = true;
-            this.newPassLabel2.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.newPassLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.newPassLabel2.Location = new System.Drawing.Point(13, 174);
-            this.newPassLabel2.Name = "newPassLabel2";
-            this.newPassLabel2.Size = new System.Drawing.Size(194, 15);
-            this.newPassLabel2.Style = MetroFramework.MetroColorStyle.Red;
-            this.newPassLabel2.TabIndex = 7;
-            this.newPassLabel2.Text = "lenght must be atleast 8 chararcters";
-            this.newPassLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.newPassLabel2.UseStyleColors = true;
-            this.newPassLabel2.Visible = false;
+            this.newPassLabel.AutoSize = true;
+            this.newPassLabel.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.newPassLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.newPassLabel.Location = new System.Drawing.Point(25, 174);
+            this.newPassLabel.Name = "newPassLabel2";
+            this.newPassLabel.Size = new System.Drawing.Size(58, 15);
+            this.newPassLabel.Style = MetroFramework.MetroColorStyle.Red;
+            this.newPassLabel.TabIndex = 7;
+            this.newPassLabel.Text = "erorr here";
+            this.newPassLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.newPassLabel.UseStyleColors = true;
+            this.newPassLabel.Visible = false;
             // 
             // ChangePasswordPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.newPassLabel2);
-            this.Controls.Add(this.newPassLabel1);
+            this.Controls.Add(this.newPassLabel);
             this.Controls.Add(this.oldPassLabel);
             this.Controls.Add(this.confirmNewPassTextBox);
             this.Controls.Add(this.newPassTextBox);
@@ -235,7 +218,6 @@ namespace PassKey.Sliders.MenuSliders
         private MetroFramework.Controls.MetroTextBox newPassTextBox;
         private MetroFramework.Controls.MetroTextBox confirmNewPassTextBox;
         private MetroFramework.Controls.MetroLabel oldPassLabel;
-        private MetroFramework.Controls.MetroLabel newPassLabel1;
-        private MetroFramework.Controls.MetroLabel newPassLabel2;
+        private MetroFramework.Controls.MetroLabel newPassLabel;
     }
 }

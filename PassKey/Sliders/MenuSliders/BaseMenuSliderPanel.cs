@@ -1,18 +1,23 @@
-﻿using MetroFramework.Controls;
-using PassKey.UserInfo;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PassKey.UserInfo;
 
 namespace PassKey.Sliders.MenuSliders
 {
-    [TypeDescriptionProvider(typeof(AbstractControlDescriptionProvider<AbstractMenuSlider, MetroUserControl>))]
-    public abstract class AbstractMenuSlider : AbstractSlider
+    public partial class BaseMenuSliderPanel : BaseSliderPanel
     {
+        public BaseMenuSliderPanel()
+        {
+            InitializeComponent();
+        }
+
         private const int OpenXConst = 660;
         private const int OpenYConst = 80;
         private const int ClosedXConst = 900;
@@ -22,7 +27,7 @@ namespace PassKey.Sliders.MenuSliders
         private const int DestinationOpenConst = 660;
         private const int DestinationClosedConst = 900;
 
-        protected AbstractMenuSlider(Form form, LoggedUser user)
+        public BaseMenuSliderPanel(Form form, LoggedUser user)
             : base(form, OpenXConst, OpenYConst, ClosedXConst, ClosedYConst, TransitionDirectionConst
                   , TransitionAccelerationConst, DestinationOpenConst, DestinationClosedConst)
         {

@@ -17,7 +17,7 @@ namespace PassKey.UsersInputValidators
                 username.Length < Constants.MinUsernameLenght ||
                 username.Length > Constants.MaxUsernameLenght)
             {
-                throw new InvalidUsernameException(string.Format(GlobalMessages.InvalidUsernameLenght
+                throw new InvalidNameLenghtException(string.Format(GlobalMessages.InvalidUsernameLenght
                     , Constants.MinUsernameLenght
                     , Constants.MaxUsernameLenght));
             }
@@ -29,18 +29,18 @@ namespace PassKey.UsersInputValidators
 
             if (RegistryData.GetUsernames().Contains(username))
             {
-                throw new InvalidUsernameException(GlobalMessages.AlreadyTaken);
+                throw new UsernameAlreadyUsedException(GlobalMessages.AlreadyTaken);
             }
 
             if (password != confirmedPassword)
             {
-                throw new InvalidPasswordException(GlobalMessages.PasswordsMismatch);
+                throw new PasswordMismatchException(GlobalMessages.PasswordsMismatch);
             }
 
             if (string.IsNullOrWhiteSpace(password) ||
                 password.Length < Constants.MinPasswordLenght)
             {
-                throw new InvalidPasswordException(string.Format(GlobalMessages.InvalidPasswordLenght
+                throw new InvalidPasswordLenghtException(string.Format(GlobalMessages.InvalidPasswordLenght
                     , Constants.MinPasswordLenght
                     , Constants.MaxPasswordLenght));
 

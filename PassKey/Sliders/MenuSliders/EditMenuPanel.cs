@@ -13,7 +13,7 @@ using PassKey.Data;
 
 namespace PassKey.Sliders.MenuSliders
 {
-    public partial class EditMenuPanel : AbstractMenuSlider
+    public partial class EditMenuPanel : BaseMenuSliderPanel
     {
         private int selectedRowIndex;
         private MetroGrid dataGrid;

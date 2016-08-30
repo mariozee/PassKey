@@ -7,20 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Transitions;
 using MetroFramework.Controls;
+using Transitions;
 
 namespace PassKey.Sliders
 {
-    [TypeDescriptionProvider(typeof(AbstractControlDescriptionProvider<AbstractSlider, MetroUserControl>))]
-    public abstract class AbstractSlider : MetroUserControl
+    public partial class BaseSliderPanel : MetroUserControl
     {
-        protected AbstractSlider(Form form
+        public BaseSliderPanel()
+        {
+            InitializeComponent();
+        }
+
+        public BaseSliderPanel(Form form
             , int xOpen, int yOpen, int xClosed
             , int yClosed, string transitionDirection, int tranAcceleration
-            , int destinationOpen, int destinationClosed)
+            , int destinationOpen, int destinationClosed) : base()
         {
-
             this.Visible = false;
             this.IsLoaded = false;
 
@@ -58,7 +61,7 @@ namespace PassKey.Sliders
 
         protected int DestinationOpen { get; set; }
 
-        protected int DestinatioClosed { get; set; }       
+        protected int DestinatioClosed { get; set; }
 
         protected void LocalizePanel()
         {

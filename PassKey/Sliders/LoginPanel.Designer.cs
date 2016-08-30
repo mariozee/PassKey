@@ -43,6 +43,10 @@ namespace PassKey.Sliders
             this.regButton = new MetroFramework.Controls.MetroButton();
             this.logButton = new MetroFramework.Controls.MetroButton();
             this.restoreLink = new MetroFramework.Controls.MetroLink();
+            this.userLabel = new MetroFramework.Controls.MetroLabel();
+            this.passLabel = new MetroFramework.Controls.MetroLabel();
+            this.userRegLabel = new MetroFramework.Controls.MetroLabel();
+            this.passRegLabel = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // metroPanel1
@@ -287,11 +291,75 @@ namespace PassKey.Sliders
             this.restoreLink.UseSelectable = true;
             this.restoreLink.Click += new System.EventHandler(this.restoreLink_Click);
             // 
-            // LoginPanel
+            // userLabel
+            // 
+            this.userLabel.AutoSize = true;
+            this.userLabel.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.userLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.userLabel.Location = new System.Drawing.Point(493, 167);
+            this.userLabel.Name = "userLabel";
+            this.userLabel.Size = new System.Drawing.Size(58, 15);
+            this.userLabel.Style = MetroFramework.MetroColorStyle.Red;
+            this.userLabel.TabIndex = 9;
+            this.userLabel.Text = "error here";
+            this.userLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.userLabel.UseStyleColors = true;
+            this.userLabel.Visible = false;
+            // 
+            // passLabel
+            // 
+            this.passLabel.AutoSize = true;
+            this.passLabel.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.passLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.passLabel.Location = new System.Drawing.Point(493, 230);
+            this.passLabel.Name = "passLabel";
+            this.passLabel.Size = new System.Drawing.Size(58, 15);
+            this.passLabel.Style = MetroFramework.MetroColorStyle.Red;
+            this.passLabel.TabIndex = 10;
+            this.passLabel.Text = "error here";
+            this.passLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.passLabel.UseStyleColors = true;
+            this.passLabel.Visible = false;
+            // 
+            // userRegLabel
+            // 
+            this.userRegLabel.AutoSize = true;
+            this.userRegLabel.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.userRegLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.userRegLabel.Location = new System.Drawing.Point(37, 132);
+            this.userRegLabel.Name = "userRegLabel";
+            this.userRegLabel.Size = new System.Drawing.Size(58, 15);
+            this.userRegLabel.Style = MetroFramework.MetroColorStyle.Red;
+            this.userRegLabel.TabIndex = 11;
+            this.userRegLabel.Text = "error here";
+            this.userRegLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.userRegLabel.UseStyleColors = true;
+            this.userRegLabel.Visible = false;
+            // 
+            // passwordRegLabel
+            // 
+            this.passRegLabel.AutoSize = true;
+            this.passRegLabel.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.passRegLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.passRegLabel.Location = new System.Drawing.Point(37, 193);
+            this.passRegLabel.Name = "passwordRegLabel";
+            this.passRegLabel.Size = new System.Drawing.Size(58, 15);
+            this.passRegLabel.Style = MetroFramework.MetroColorStyle.Red;
+            this.passRegLabel.TabIndex = 12;
+            this.passRegLabel.Text = "error here";
+            this.passRegLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.passRegLabel.UseStyleColors = true;
+            this.passRegLabel.Visible = false;
+            // 
+            // passRegLabel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.passRegLabel);
+            this.Controls.Add(this.userRegLabel);
+            this.Controls.Add(this.passLabel);
+            this.Controls.Add(this.userLabel);
             this.Controls.Add(this.restoreLink);
             this.Controls.Add(this.logButton);
             this.Controls.Add(this.regButton);
@@ -303,7 +371,7 @@ namespace PassKey.Sliders
             this.Controls.Add(this.passRegTextBox);
             this.Controls.Add(this.userRegTextBox);
             this.Controls.Add(this.metroPanel1);
-            this.Name = "LoginPanel";
+            this.Name = "passRegLabel";
             this.Size = new System.Drawing.Size(900, 500);
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.ResumeLayout(false);
@@ -324,5 +392,9 @@ namespace PassKey.Sliders
         private MetroFramework.Controls.MetroButton regButton;
         private MetroFramework.Controls.MetroButton logButton;
         private MetroFramework.Controls.MetroLink restoreLink;
+        private MetroFramework.Controls.MetroLabel userLabel;
+        private MetroFramework.Controls.MetroLabel passLabel;
+        private MetroFramework.Controls.MetroLabel userRegLabel;
+        private MetroFramework.Controls.MetroLabel passRegLabel;
     }
 }

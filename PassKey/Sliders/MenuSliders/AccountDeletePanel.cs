@@ -11,10 +11,11 @@ using PassKey.UserInfo;
 using PassKey.SecurityUtilities;
 using PassKey.Data;
 using MetroFramework;
+using MetroFramework.Controls;
 
 namespace PassKey.Sliders.MenuSliders
 {
-    public partial class AccountDeletePanel : AbstractMenuSlider
+    public partial class AccountDeletePanel : BaseMenuSliderPanel
     {
         private UserPanel userPanel;
 

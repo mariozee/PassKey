@@ -41,7 +41,7 @@ namespace PassKey.Sliders
             // 
             // restoreButton
             // 
-            this.restoreButton.Location = new System.Drawing.Point(145, 56);
+            this.restoreButton.Location = new System.Drawing.Point(56, 56);
             this.restoreButton.Name = "restoreButton";
             this.restoreButton.Size = new System.Drawing.Size(75, 23);
             this.restoreButton.TabIndex = 0;
@@ -87,7 +87,7 @@ namespace PassKey.Sliders
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(64, 56);
+            this.closeButton.Location = new System.Drawing.Point(169, 56);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(75, 23);
             this.closeButton.TabIndex = 2;

@@ -12,10 +12,11 @@ using PassKey.Data;
 using PassKey.SecurityUtilities;
 using PassKey.Exceptions;
 using MetroFramework;
+using MetroFramework.Controls;
 
 namespace PassKey.Sliders.MenuSliders
 {
-    public partial class ChangePasswordPanel : AbstractMenuSlider
+    public partial class ChangePasswordPanel : BaseMenuSliderPanel
     {
         public ChangePasswordPanel(Form form, LoggedUser user)
             : base(form, user)
@@ -26,8 +27,7 @@ namespace PassKey.Sliders.MenuSliders
         private void changeButton_Click(object sender, EventArgs e)
         {
             this.oldPassLabel.Visible = false;
-            this.newPassLabel1.Visible = false;
-            this.newPassLabel2.Visible = false;
+            this.newPassLabel.Visible = false;
 
             string currentPassword = this.oldPasswordTextBox.Text;
             string currentPasswordHash = HashUtilities.HashPassword(currentPassword);
@@ -51,19 +51,20 @@ namespace PassKey.Sliders.MenuSliders
 
                     this.Swipe(true);
                 }
-                catch (InvalidPasswordException ipe)
+                catch (InvalidPasswordLenghtException ipe)
                 {
-                    this.newPassLabel2.Text = ipe.Message;
-                    this.newPassLabel2.Visible = true;
+                    this.newPassLabel.Text = ipe.Message;
+                    this.newPassLabel.Visible = true;
                 }
                 catch (PasswordMismatchException pme)
                 {
-                    this.newPassLabel1.Text = pme.Message;
-                    this.newPassLabel1.Visible = true;
+                    this.newPassLabel.Text = pme.Message;
+                    this.newPassLabel.Visible = true;
                 }
             }
             else
             {
+                this.oldPassLabel.Text = "invalid password";
                 this.oldPassLabel.Visible = true;
             }
         }
@@ -78,7 +79,7 @@ namespace PassKey.Sliders.MenuSliders
             if (string.IsNullOrWhiteSpace(password) ||
                 password.Length < Constants.MinPasswordLenght)
             {
-                throw new InvalidPasswordException(string.Format(GlobalMessages.InvalidPasswordLenght
+                throw new InvalidPasswordLenghtException(string.Format(GlobalMessages.InvalidPasswordLenght
                     , Constants.MinPasswordLenght
                     , Constants.MaxPasswordLenght));
 
@@ -87,7 +88,7 @@ namespace PassKey.Sliders.MenuSliders
 
         private void closeButton_Click(object sender, EventArgs e)
         {
-            this.Swipe();
+            this.Swipe(false);
         }
     }
 }

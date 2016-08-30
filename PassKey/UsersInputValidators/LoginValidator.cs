@@ -22,7 +22,7 @@ namespace PassKey.UsersInputValidators
             string currentPasswordHash = HashUtilities.HashPassword(password);
             if (hashedPassword != currentPasswordHash)
             {
-                throw new InvalidPasswordException(GlobalMessages.IncorectPassword);
+                throw new InvalidPasswordLenghtException(GlobalMessages.IncorectPassword);
             }
         }
     }

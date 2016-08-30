@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace PassKey.Exceptions
 {
-    public class InvalidPasswordLenghtException : PassKeyException
+    public class InvalidNameLenghtException : PassKeyException
     {
-        public InvalidPasswordLenghtException(string message)
+        public InvalidNameLenghtException(string message)
             : base(message)
         {
         }

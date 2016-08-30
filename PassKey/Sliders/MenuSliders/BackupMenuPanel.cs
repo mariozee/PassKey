@@ -11,16 +11,16 @@ using PassKey.UserInfo;
 using PassKey.Data;
 using System.IO;
 using MetroFramework;
+using MetroFramework.Controls;
 
 namespace PassKey.Sliders.MenuSliders
 {
-    public partial class BackupMenuSlider : AbstractMenuSlider
+    public partial class BackupMenuPanel : BaseMenuSliderPanel
     {
-        public BackupMenuSlider(Form form, LoggedUser user)
+        public BackupMenuPanel(Form form, LoggedUser user)
             : base(form, user)
         {
             InitializeComponent();
-            this.restoreTextBox.ButtonClick += RestoreTextBox_ButtonClick;
             this.backupTextBox.ButtonClick += BackupTextBox_ButtonClick;
         }
 
@@ -34,7 +34,6 @@ namespace PassKey.Sliders.MenuSliders
         private void RestoreTextBox_ButtonClick(object sender, EventArgs e)
         {
             this.browseDialog.ShowDialog();
-            this.restoreTextBox.Text = this.browseDialog.SelectedPath;
         }
 
         private void backupButton_Click(object sender, EventArgs e)

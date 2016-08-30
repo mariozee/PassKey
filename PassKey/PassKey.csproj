@@ -70,10 +70,12 @@
     <Compile Include="Data\DataTranslator.cs" />
     <Compile Include="Data\RegistryData.cs" />
     <Compile Include="Exceptions\InvalidHostNameException.cs" />
+    <Compile Include="Exceptions\InvalidNameLenghtException.cs" />
     <Compile Include="Exceptions\InvalidPasswordException.cs" />
     <Compile Include="Exceptions\InvalidUsernameException.cs" />
     <Compile Include="Exceptions\PassKeyException.cs" />
     <Compile Include="Exceptions\PasswordMismatchException.cs" />
+    <Compile Include="Exceptions\UsernameAlreadyUsedException.cs" />
     <Compile Include="GlobalMessages.cs" />
     <Compile Include="SecurityUtilities\CryptographicUtilities.cs" />
     <Compile Include="SecurityUtilities\HashUtilities.cs" />
@@ -108,11 +110,23 @@
     <Compile Include="Sliders\MenuSliders\AddMenuPanel.Designer.cs">
       <DependentUpon>AddMenuPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sliders\MenuSliders\BackupMenuSlider.cs">
+    <Compile Include="Sliders\MenuSliders\BackupMenuPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Sliders\MenuSliders\BackupMenuSlider.Designer.cs">
-      <DependentUpon>BackupMenuSlider.cs</DependentUpon>
+    <Compile Include="Sliders\MenuSliders\BackupMenuPanel.Designer.cs">
+      <DependentUpon>BackupMenuPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sliders\BaseSliderPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sliders\BaseSliderPanel.Designer.cs">
+      <DependentUpon>BaseSliderPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sliders\MenuSliders\BaseMenuSliderPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sliders\MenuSliders\BaseMenuSliderPanel.Designer.cs">
+      <DependentUpon>BaseMenuSliderPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Sliders\MenuSliders\ChangePasswordPanel.cs">
       <SubType>UserControl</SubType>
@@ -165,8 +179,8 @@
     <EmbeddedResource Include="Sliders\MenuSliders\AddMenuPanel.resx">
       <DependentUpon>AddMenuPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sliders\MenuSliders\BackupMenuSlider.resx">
-      <DependentUpon>BackupMenuSlider.cs</DependentUpon>
+    <EmbeddedResource Include="Sliders\MenuSliders\BackupMenuPanel.resx">
+      <DependentUpon>BackupMenuPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sliders\MenuSliders\ChangePasswordPanel.resx">
       <DependentUpon>ChangePasswordPanel.cs</DependentUpon>

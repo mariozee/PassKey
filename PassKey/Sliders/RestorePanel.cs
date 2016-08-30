@@ -11,10 +11,11 @@ using System.IO;
 using PassKey.SecurityUtilities;
 using MetroFramework;
 using PassKey.Data;
+using MetroFramework.Controls;
 
 namespace PassKey.Sliders
 {
-    public partial class RestorePanel : AbstractSlider
+    public partial class RestorePanel : BaseSliderPanel
     {
         private const int OpenXConst = 450;
         private const int OpenYConst = 500;
@@ -26,9 +27,9 @@ namespace PassKey.Sliders
         private const int DestinationClosedConst = 600;
 
         private Form mainForm;
-        private AbstractSlider loginPanel;
+        private BaseSliderPanel loginPanel;
 
-        public RestorePanel(Form form, AbstractSlider loginPanel)
+        public RestorePanel(Form form)
             : base(form, OpenXConst, OpenYConst, ClosedXConst, ClosedYConst, TransitionDirectionConst
                   , TransitionAccelerationConst, DestinationOpenConst, DestinationClosedConst)
         {

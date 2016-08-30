@@ -2,7 +2,7 @@
 
 namespace PassKey.Sliders.MenuSliders
 {
-    partial class BackupMenuSlider
+    partial class BackupMenuPanel
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,11 +31,9 @@ namespace PassKey.Sliders.MenuSliders
         private void InitializeComponent()
         {
             this.backupTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.restoreTextBox = new MetroFramework.Controls.MetroTextBox();
             this.closeButton = new MetroFramework.Controls.MetroButton();
             this.browseDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.backupButton = new MetroFramework.Controls.MetroButton();
-            this.restoreButton = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // backupTextBox
@@ -73,41 +71,6 @@ namespace PassKey.Sliders.MenuSliders
             this.backupTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.backupTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // restoreTextBox
-            // 
-            // 
-            // 
-            // 
-            this.restoreTextBox.CustomButton.Image = null;
-            this.restoreTextBox.CustomButton.Location = new System.Drawing.Point(164, 1);
-            this.restoreTextBox.CustomButton.Name = "";
-            this.restoreTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.restoreTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.restoreTextBox.CustomButton.TabIndex = 1;
-            this.restoreTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.restoreTextBox.CustomButton.UseSelectable = true;
-            this.restoreTextBox.DisplayIcon = true;
-            this.restoreTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.restoreTextBox.Lines = new string[0];
-            this.restoreTextBox.Location = new System.Drawing.Point(17, 262);
-            this.restoreTextBox.MaxLength = 32767;
-            this.restoreTextBox.Name = "restoreTextBox";
-            this.restoreTextBox.PasswordChar = '\0';
-            this.restoreTextBox.PromptText = "Restore from...";
-            this.restoreTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.restoreTextBox.SelectedText = "";
-            this.restoreTextBox.SelectionLength = 0;
-            this.restoreTextBox.SelectionStart = 0;
-            this.restoreTextBox.ShortcutsEnabled = true;
-            this.restoreTextBox.ShowButton = true;
-            this.restoreTextBox.Size = new System.Drawing.Size(188, 25);
-            this.restoreTextBox.TabIndex = 1;
-            this.restoreTextBox.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.restoreTextBox.UseSelectable = true;
-            this.restoreTextBox.WaterMark = "Restore from...";
-            this.restoreTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.restoreTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // closeButton
             // 
             this.closeButton.Location = new System.Drawing.Point(78, 420);
@@ -130,26 +93,14 @@ namespace PassKey.Sliders.MenuSliders
             this.backupButton.UseSelectable = true;
             this.backupButton.Click += new System.EventHandler(this.backupButton_Click);
             // 
-            // restoreButton
-            // 
-            this.restoreButton.Location = new System.Drawing.Point(78, 293);
-            this.restoreButton.Name = "restoreButton";
-            this.restoreButton.Size = new System.Drawing.Size(75, 23);
-            this.restoreButton.TabIndex = 4;
-            this.restoreButton.Text = "Restore";
-            this.restoreButton.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.restoreButton.UseSelectable = true;
-            // 
-            // BackupRestoreMenuSlider
+            // BackupMenuPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.restoreButton);
             this.Controls.Add(this.backupButton);
             this.Controls.Add(this.closeButton);
-            this.Controls.Add(this.restoreTextBox);
             this.Controls.Add(this.backupTextBox);
-            this.Name = "BackupRestoreMenuSlider";
+            this.Name = "BackupMenuPanel";
             this.Size = new System.Drawing.Size(240, 500);
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.ResumeLayout(false);
@@ -159,10 +110,8 @@ namespace PassKey.Sliders.MenuSliders
         #endregion
 
         private MetroFramework.Controls.MetroTextBox backupTextBox;
-        private MetroFramework.Controls.MetroTextBox restoreTextBox;
         private MetroFramework.Controls.MetroButton closeButton;
         private FolderBrowserDialog browseDialog;
         private MetroFramework.Controls.MetroButton backupButton;
-        private MetroFramework.Controls.MetroButton restoreButton;
     }
 }

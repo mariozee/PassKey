@@ -13,12 +13,12 @@ using PassKey.Data;
 
 namespace PassKey.Sliders.MenuSliders
 {
-    public partial class AddMenuPanel : AbstractMenuSlider
+    public partial class AddMenuPanel : BaseMenuSliderPanel
     {
         public AddMenuPanel(Form form, LoggedUser user)
             : base(form, user)
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
 
         private void addButton_Click(object sender, EventArgs e)

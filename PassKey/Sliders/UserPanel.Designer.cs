@@ -7,7 +7,7 @@ namespace PassKey.Sliders
         /// <summary> 
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;       
+        private System.ComponentModel.IContainer components = null;
 
         /// <summary> 
         /// Clean up any resources being used.
@@ -171,7 +171,7 @@ namespace PassKey.Sliders
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(744, 66);
+            this.addButton.Location = new System.Drawing.Point(744, 71);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 4;
@@ -181,7 +181,7 @@ namespace PassKey.Sliders
             // 
             // editButton
             // 
-            this.editButton.Location = new System.Drawing.Point(744, 117);
+            this.editButton.Location = new System.Drawing.Point(744, 124);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(75, 23);
             this.editButton.TabIndex = 5;
@@ -191,7 +191,7 @@ namespace PassKey.Sliders
             // 
             // removeButton
             // 
-            this.removeButton.Location = new System.Drawing.Point(744, 167);
+            this.removeButton.Location = new System.Drawing.Point(744, 176);
             this.removeButton.Name = "removeButton";
             this.removeButton.Size = new System.Drawing.Size(75, 23);
             this.removeButton.TabIndex = 6;
@@ -201,7 +201,7 @@ namespace PassKey.Sliders
             // 
             // backupRestoreButton
             // 
-            this.backupRestoreButton.Location = new System.Drawing.Point(744, 221);
+            this.backupRestoreButton.Location = new System.Drawing.Point(744, 230);
             this.backupRestoreButton.Name = "backupRestoreButton";
             this.backupRestoreButton.Size = new System.Drawing.Size(75, 23);
             this.backupRestoreButton.TabIndex = 7;
@@ -211,7 +211,7 @@ namespace PassKey.Sliders
             // 
             // chnageButton
             // 
-            this.chnageButton.Location = new System.Drawing.Point(744, 276);
+            this.chnageButton.Location = new System.Drawing.Point(744, 291);
             this.chnageButton.Name = "chnageButton";
             this.chnageButton.Size = new System.Drawing.Size(75, 23);
             this.chnageButton.TabIndex = 8;
@@ -221,7 +221,7 @@ namespace PassKey.Sliders
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(744, 371);
+            this.deleteButton.Location = new System.Drawing.Point(744, 402);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(75, 23);
             this.deleteButton.TabIndex = 9;
@@ -231,7 +231,7 @@ namespace PassKey.Sliders
             // 
             // logoutButton
             // 
-            this.logoutButton.Location = new System.Drawing.Point(744, 324);
+            this.logoutButton.Location = new System.Drawing.Point(744, 343);
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Size = new System.Drawing.Size(75, 23);
             this.logoutButton.TabIndex = 10;

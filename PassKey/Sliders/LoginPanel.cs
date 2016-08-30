@@ -11,10 +11,11 @@ using PassKey.UsersInputValidators;
 using PassKey.ActionHandlers;
 using PassKey.Exceptions;
 using PassKey.UserInfo;
+using MetroFramework.Controls;
 
 namespace PassKey.Sliders
 {
-    public partial class LoginPanel : AbstractSlider
+    public partial class LoginPanel : BaseSliderPanel
     {
         private const int OpenXConst = 0;
         private const int OpenYConst = 80;
@@ -25,46 +26,81 @@ namespace PassKey.Sliders
         private const int DestinationOpenConst = 0;
         private const int DestinationClosedConst = 900;
 
-        private Form mainForm;
         private RestorePanel restorePanel;
+        private UserPanel userPanel;
+        private LoggedUser user;
+        private LoginHandler loginHandler;
+        private LoginValidator loginValidator;
+        private RegistrationHandler regHandler;
+        private RegistrationValidator regValidator;
 
         public LoginPanel(Form form)
             : base(form, OpenXConst, OpenYConst, ClosedXConst, ClosedYConst, TransitionDirectionConst, TransitionAccelerationConst, DestinationOpenConst, DestinationClosedConst)
         {
             InitializeComponent();
-            this.mainForm = form;
+            this.loginHandler = new LoginHandler();
+            this.loginValidator = new LoginValidator();
+            this.regHandler = new RegistrationHandler();
+            this.regValidator = new RegistrationValidator();
         }
 
         private void logButton_Click(object sender, EventArgs e)
         {
-            LoginHandler logH = new LoginHandler();
-            LoginValidator logV = new LoginValidator();
+            this.userLabel.Visible = false;
+            this.passLabel.Visible = false;
 
             try
             {
-                logV.ValidateInput(this.userNameTextBox.Text, this.passowrdTextBox.Text);
-                LoggedUser user = logH.Login(this.userNameTextBox.Text, this.passowrdTextBox.Text);
-                UserPanel userPanel = new UserPanel(this.MainForm, user);
-                this.Swipe(false);
-                userPanel.Swipe(true);
+                this.loginValidator.ValidateInput(this.userNameTextBox.Text, this.passowrdTextBox.Text);
+                this.LogUser();
             }
-            catch (PassKeyException pke)
+            catch (InvalidUsernameException iue)
             {
+                this.userLabel.Text = iue.Message;
+                this.userLabel.Visible = true;
+            }
+            catch (InvalidPasswordLenghtException ipe)
+            {
+                this.passLabel.Text = ipe.Message;
+                this.passLabel.Visible = true;
             }
         }
 
         private void regButton_Click(object sender, EventArgs e)
         {
-            RegistrationValidator regV = new RegistrationValidator();
-            RegistrationHandler regH = new RegistrationHandler();
+            this.userRegLabel.Visible = false;
+            this.passRegLabel.Visible = false;
 
             try
             {
-                regV.ValidateInput(this.userRegTextBox.Text, this.passRegTextBox.Text, this.confirmPassRegTextBox.Text);
-                regH.Register(this.userRegTextBox.Text, this.passRegTextBox.Text);
+                this.regValidator.ValidateInput(this.userRegTextBox.Text, this.passRegTextBox.Text, this.confirmPassRegTextBox.Text);
+                this.regHandler.Register(this.userRegTextBox.Text, this.passRegTextBox.Text);
+                this.LogUser();
             }
-            catch (PassKeyException pke)
+            catch (UsernameAlreadyUsedException uaue)
             {
+                this.userRegLabel.Text = uaue.Message;
+                this.userRegLabel.Visible = true;
+            }
+            catch (InvalidNameLenghtException inle)
+            {
+                this.userRegLabel.Text = inle.Message;
+                this.userRegLabel.Visible = true;
+            }
+            catch (InvalidUsernameException iue)
+            {
+                this.userRegLabel.Text = iue.Message;
+                this.userRegLabel.Visible = true;
+            }
+            catch (PasswordMismatchException pme)
+            {
+                this.passRegLabel.Text = pme.Message;
+                this.passRegLabel.Visible = true;
+            }
+            catch (InvalidPasswordLenghtException iple)
+            {
+                this.passRegLabel.Text = iple.Message;
+                this.passRegLabel.Visible = true;
             }
 
         }
@@ -72,8 +108,16 @@ namespace PassKey.Sliders
         private void restoreLink_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
-            this.restorePanel = new RestorePanel(this.mainForm, this);
+            this.restorePanel = new RestorePanel(this.MainForm);
             restorePanel.Swipe(true);
+        }
+
+        private void LogUser()
+        {
+            this.user = loginHandler.Login(this.userNameTextBox.Text, this.passowrdTextBox.Text);
+            this.userPanel = new UserPanel(this.MainForm, user);
+            this.Swipe(false);
+            this.userPanel.Swipe(true);
         }
     }
 }

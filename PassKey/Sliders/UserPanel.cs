@@ -11,10 +11,11 @@ using PassKey.UserInfo;
 using PassKey.Sliders.MenuSliders;
 using MetroFramework;
 using PassKey.Data;
+using MetroFramework.Controls;
 
 namespace PassKey.Sliders
 {
-    public partial class UserPanel : AbstractSlider
+    public partial class UserPanel : BaseSliderPanel
     {
         private const int OpenXConst = 0;
         private const int OpenYConst = 80;
@@ -34,6 +35,7 @@ namespace PassKey.Sliders
             this.user = user;
             this.dataGrid.DataSource = user.Data;
             this.dataGrid.Refresh();
+            this.SetTopLevel(true);
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -68,7 +70,7 @@ namespace PassKey.Sliders
 
         private void backupRestoreButton_Click(object sender, EventArgs e)
         {
-            BackupMenuSlider backupSlider = new BackupMenuSlider(this.MainForm, this.user);
+            BackupMenuPanel backupSlider = new BackupMenuPanel(this.MainForm, this.user);
             backupSlider.Swipe(true);
         }
 
