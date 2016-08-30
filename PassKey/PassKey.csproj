@@ -73,6 +73,7 @@
     <Compile Include="Exceptions\InvalidPasswordException.cs" />
     <Compile Include="Exceptions\InvalidUsernameException.cs" />
     <Compile Include="Exceptions\PassKeyException.cs" />
+    <Compile Include="Exceptions\PasswordMismatchException.cs" />
     <Compile Include="GlobalMessages.cs" />
     <Compile Include="SecurityUtilities\CryptographicUtilities.cs" />
     <Compile Include="SecurityUtilities\HashUtilities.cs" />
@@ -95,17 +96,29 @@
     <Compile Include="Sliders\MenuSliders\AbstractMenuSlider.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Sliders\MenuSliders\AccountDeletePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sliders\MenuSliders\AccountDeletePanel.Designer.cs">
+      <DependentUpon>AccountDeletePanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sliders\MenuSliders\AddMenuPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Sliders\MenuSliders\AddMenuPanel.Designer.cs">
       <DependentUpon>AddMenuPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sliders\MenuSliders\BackupRestoreMenuSlider.cs">
+    <Compile Include="Sliders\MenuSliders\BackupMenuSlider.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Sliders\MenuSliders\BackupRestoreMenuSlider.Designer.cs">
-      <DependentUpon>BackupRestoreMenuSlider.cs</DependentUpon>
+    <Compile Include="Sliders\MenuSliders\BackupMenuSlider.Designer.cs">
+      <DependentUpon>BackupMenuSlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sliders\MenuSliders\ChangePasswordPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sliders\MenuSliders\ChangePasswordPanel.Designer.cs">
+      <DependentUpon>ChangePasswordPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Sliders\MenuSliders\EditMenuPanel.cs">
       <SubType>UserControl</SubType>
@@ -146,11 +159,17 @@
     <EmbeddedResource Include="Sliders\LoginPanel.resx">
       <DependentUpon>LoginPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sliders\MenuSliders\AccountDeletePanel.resx">
+      <DependentUpon>AccountDeletePanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sliders\MenuSliders\AddMenuPanel.resx">
       <DependentUpon>AddMenuPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Sliders\MenuSliders\BackupRestoreMenuSlider.resx">
-      <DependentUpon>BackupRestoreMenuSlider.cs</DependentUpon>
+    <EmbeddedResource Include="Sliders\MenuSliders\BackupMenuSlider.resx">
+      <DependentUpon>BackupMenuSlider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sliders\MenuSliders\ChangePasswordPanel.resx">
+      <DependentUpon>ChangePasswordPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sliders\MenuSliders\EditMenuPanel.resx">
       <DependentUpon>EditMenuPanel.cs</DependentUpon>

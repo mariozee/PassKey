@@ -1,4 +1,5 @@
 ﻿using MetroFramework.Controls;
+using PassKey.UserInfo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,10 +22,13 @@ namespace PassKey.Sliders.MenuSliders
         private const int DestinationOpenConst = 660;
         private const int DestinationClosedConst = 900;
 
-        protected AbstractMenuSlider(Form form)
+        protected AbstractMenuSlider(Form form, LoggedUser user)
             : base(form, OpenXConst, OpenYConst, ClosedXConst, ClosedYConst, TransitionDirectionConst
                   , TransitionAccelerationConst, DestinationOpenConst, DestinationClosedConst)
         {
+            this.User = user;
         }
+
+        public LoggedUser User { get; private set; }
     }
 }

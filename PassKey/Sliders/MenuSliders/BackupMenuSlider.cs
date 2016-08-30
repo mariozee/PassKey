@@ -14,15 +14,12 @@ using MetroFramework;
 
 namespace PassKey.Sliders.MenuSliders
 {
-    public partial class BackupRestoreMenuSlider : AbstractMenuSlider
+    public partial class BackupMenuSlider : AbstractMenuSlider
     {
-        private LoggedUser user;
-
-        public BackupRestoreMenuSlider(Form form, LoggedUser user)
-            : base(form)
+        public BackupMenuSlider(Form form, LoggedUser user)
+            : base(form, user)
         {
             InitializeComponent();
-            this.user = user;
             this.restoreTextBox.ButtonClick += RestoreTextBox_ButtonClick;
             this.backupTextBox.ButtonClick += BackupTextBox_ButtonClick;
         }
@@ -44,7 +41,7 @@ namespace PassKey.Sliders.MenuSliders
         {
             if (!string.IsNullOrWhiteSpace(this.backupTextBox.Text))
             {
-                string[] data = RegistryData.GetDataForBackup(this.user.Username);
+                string[] data = RegistryData.GetDataForBackup(this.User.Username);
                 string path = this.backupTextBox.Text + "\\" + "backup.dat";
                 File.WriteAllLines(path, data);
                 MetroMessageBox.Show(this

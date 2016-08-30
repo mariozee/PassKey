@@ -40,10 +40,7 @@ namespace PassKey.Data
 
         public static void SetNewPassword(string username, string password)
         {
-            registry
-                .OpenSubKey(Constants.PassKeySubKeyName, true)
-                .OpenSubKey(Constants.UsersLoginInfoSubKey, true)
-                .SetValue(username, password);
+            registry.OpenSubKey(Constants.UsersLoginSubKeyPath, true).SetValue(username, password);
             registry.Close();
         }
 
@@ -59,7 +56,7 @@ namespace PassKey.Data
 
         public static void CreateUser(string username, string password, string data)
         {
-            registry.OpenSubKey(Constants.UsersLoginSubKeyPath, true).SetValue(username, password);                        
+            registry.OpenSubKey(Constants.UsersLoginSubKeyPath, true).SetValue(username, password);
             registry.Close();
 
             registry.OpenSubKey(Constants.UsersDataSubKeyPath, true).SetValue(username, data);
@@ -67,7 +64,7 @@ namespace PassKey.Data
         }
 
         public static string[] GetDataForBackup(string username)
-        {            
+        {
             string logInfo = registry.OpenSubKey(Constants.UsersLoginSubKeyPath).GetValue(username).ToString();
             string userData = registry.OpenSubKey(Constants.UsersDataSubKeyPath).GetValue(username).ToString();
 
@@ -101,6 +98,14 @@ namespace PassKey.Data
             registry.OpenSubKey(Constants.UsersLoginSubKeyPath, true).SetValue(username, logInfo);
             registry.Close();
             registry.OpenSubKey(Constants.UsersDataSubKeyPath, true).SetValue(username, userData);
+            registry.Close();
+        }
+
+        public static void DeleteAccout(string username)
+        {
+            registry.OpenSubKey(Constants.UsersLoginSubKeyPath, true).DeleteValue(username);
+            registry.Close();
+            registry.OpenSubKey(Constants.UsersDataSubKeyPath, true).DeleteValue(username);
             registry.Close();
         }
     }

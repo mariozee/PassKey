@@ -2,7 +2,7 @@
 
 namespace PassKey.Sliders.MenuSliders
 {
-    partial class BackupRestoreMenuSlider
+    partial class BackupMenuSlider
     {
         /// <summary> 
         /// Required designer variable.

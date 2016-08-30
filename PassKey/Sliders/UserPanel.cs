@@ -25,28 +25,26 @@ namespace PassKey.Sliders
         private const int DestinationOpenConst = 0;
         private const int DestinationClosedConst = -900;
 
-        private Form mainForm;
         private LoggedUser user;
 
-        public UserPanel(Form form, LoggedUser user) 
+        public UserPanel(Form form, LoggedUser user)
             : base(form, OpenXConst, OpenYConst, ClosedXConst, ClosedYConst, TransitionDirectionConst, TransitionAccelerationConst, DestinationOpenConst, DestinationClosedConst)
         {
             InitializeComponent();
             this.user = user;
             this.dataGrid.DataSource = user.Data;
             this.dataGrid.Refresh();
-            this.mainForm = form;
-        }        
+        }
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            AddMenuPanel addPanel = new AddMenuPanel(this.mainForm, this.user);
+            AddMenuPanel addPanel = new AddMenuPanel(this.MainForm, this.user);
             addPanel.Swipe(true);
         }
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            EditMenuPanel editPanel = new EditMenuPanel(this.mainForm, this.user, this.dataGrid);
+            EditMenuPanel editPanel = new EditMenuPanel(this.MainForm, this.user, this.dataGrid);
             editPanel.Swipe(true);
         }
 
@@ -70,8 +68,39 @@ namespace PassKey.Sliders
 
         private void backupRestoreButton_Click(object sender, EventArgs e)
         {
-            BackupRestoreMenuSlider backupSlider = new BackupRestoreMenuSlider(this.mainForm, this.user);
+            BackupMenuSlider backupSlider = new BackupMenuSlider(this.MainForm, this.user);
             backupSlider.Swipe(true);
+        }
+
+        private void chnageButton_Click(object sender, EventArgs e)
+        {
+            ChangePasswordPanel changePasswordPanel = new ChangePasswordPanel(this.MainForm, this.user);
+            changePasswordPanel.Swipe(true);
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            AccountDeletePanel deletePanel = new AccountDeletePanel(this.MainForm, this.user, this);
+            DialogResult result = MetroMessageBox.Show(this.MainForm, string.Empty
+                , "Your account will be deleted permanently. Do you want to continue?"
+                , MessageBoxButtons.YesNo, MessageBoxIcon.Warning, 100);
+
+            if (result == DialogResult.Yes)
+            {
+                deletePanel.Swipe(true);
+            }
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            this.Logout();
+        }
+
+        public void Logout()
+        {
+            LoginPanel loginPanel = new LoginPanel(this.MainForm);
+            this.Swipe(false);
+            loginPanel.Swipe(true);
         }
     }
 }

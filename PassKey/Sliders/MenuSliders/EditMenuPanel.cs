@@ -15,15 +15,13 @@ namespace PassKey.Sliders.MenuSliders
 {
     public partial class EditMenuPanel : AbstractMenuSlider
     {
-        private LoggedUser user { get; set; }
         private int selectedRowIndex;
         private MetroGrid dataGrid;
 
         public EditMenuPanel(Form form, LoggedUser user, MetroGrid dataGrid)
-            : base(form)
+            : base(form, user)
         {
             InitializeComponent();
-            this.user = user;
             this.dataGrid = dataGrid;
             GetItemToEdit(dataGrid);    
         }        
@@ -46,12 +44,12 @@ namespace PassKey.Sliders.MenuSliders
 
         private void doneButton_Click(object sender, EventArgs e)
         {
-            this.user.Data.RemoveAt(selectedRowIndex);
+            this.User.Data.RemoveAt(selectedRowIndex);
             UserDataInfo dataInfo = new UserDataInfo(this.hostNameTextBox.Text
                 , this.emailTextBox.Text, this.usernameTextBox.Text, this.passwordTextBox.Text);
-            this.user.Data.Insert(selectedRowIndex, dataInfo);
+            this.User.Data.Insert(selectedRowIndex, dataInfo);
 
-            DataTranslator.Compose(this.user.Data, this.user.Username, this.user.Key);
+            DataTranslator.Compose(this.User.Data, this.User.Username, this.User.Key);
 
             this.dataGrid.Enabled = true;
             this.Swipe(false);

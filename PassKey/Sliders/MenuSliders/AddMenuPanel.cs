@@ -15,13 +15,10 @@ namespace PassKey.Sliders.MenuSliders
 {
     public partial class AddMenuPanel : AbstractMenuSlider
     {
-        private LoggedUser user;
-
         public AddMenuPanel(Form form, LoggedUser user)
-            : base(form)
+            : base(form, user)
         {
             InitializeComponent();
-            this.user = user;
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -29,8 +26,8 @@ namespace PassKey.Sliders.MenuSliders
             UserDataInfo dataInfo = new UserDataInfo(this.hostTextBox.Text
                 , this.emailTextBox.Text, this.usernameTextBox.Text, this.passwordTextBox.Text);
 
-            this.user.Data.Add(dataInfo);
-            DataTranslator.Compose(this.user.Data, this.user.Username, this.user.Key);
+            this.User.Data.Add(dataInfo);
+            DataTranslator.Compose(this.User.Data, this.User.Username, this.User.Key);
 
             this.hostTextBox.Clear();
             this.emailTextBox.Clear();

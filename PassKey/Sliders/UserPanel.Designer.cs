@@ -48,6 +48,7 @@ namespace PassKey.Sliders
             this.backupRestoreButton = new MetroFramework.Controls.MetroButton();
             this.chnageButton = new MetroFramework.Controls.MetroButton();
             this.deleteButton = new MetroFramework.Controls.MetroButton();
+            this.logoutButton = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userDataInfoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -198,10 +199,10 @@ namespace PassKey.Sliders
             this.removeButton.UseSelectable = true;
             this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
-            // backupButton
+            // backupRestoreButton
             // 
             this.backupRestoreButton.Location = new System.Drawing.Point(744, 221);
-            this.backupRestoreButton.Name = "backupButton";
+            this.backupRestoreButton.Name = "backupRestoreButton";
             this.backupRestoreButton.Size = new System.Drawing.Size(75, 23);
             this.backupRestoreButton.TabIndex = 7;
             this.backupRestoreButton.Text = "Backup and Restore";
@@ -216,20 +217,33 @@ namespace PassKey.Sliders
             this.chnageButton.TabIndex = 8;
             this.chnageButton.Text = "Chnage";
             this.chnageButton.UseSelectable = true;
+            this.chnageButton.Click += new System.EventHandler(this.chnageButton_Click);
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(744, 336);
+            this.deleteButton.Location = new System.Drawing.Point(744, 371);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(75, 23);
             this.deleteButton.TabIndex = 9;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseSelectable = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
+            // logoutButton
+            // 
+            this.logoutButton.Location = new System.Drawing.Point(744, 324);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(75, 23);
+            this.logoutButton.TabIndex = 10;
+            this.logoutButton.Text = "Logout";
+            this.logoutButton.UseSelectable = true;
+            this.logoutButton.Click += new System.EventHandler(this.logout_Click);
             // 
             // UserPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.chnageButton);
             this.Controls.Add(this.backupRestoreButton);
@@ -265,5 +279,6 @@ namespace PassKey.Sliders
         private DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private MetroFramework.Controls.MetroButton logoutButton;
     }
 }

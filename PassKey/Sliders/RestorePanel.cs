@@ -29,7 +29,8 @@ namespace PassKey.Sliders
         private AbstractSlider loginPanel;
 
         public RestorePanel(Form form, AbstractSlider loginPanel)
-            : base(form, OpenXConst, OpenYConst, ClosedXConst, ClosedYConst, TransitionDirectionConst, TransitionAccelerationConst, DestinationOpenConst, DestinationClosedConst)
+            : base(form, OpenXConst, OpenYConst, ClosedXConst, ClosedYConst, TransitionDirectionConst
+                  , TransitionAccelerationConst, DestinationOpenConst, DestinationClosedConst)
         {
             InitializeComponent();
             this.restoreTextBox.ButtonClick += RestoreTextBox_ButtonClick;
