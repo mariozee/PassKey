@@ -37,7 +37,9 @@ namespace PassKey.Sliders.MenuSliders
             this.usernameTextBox = new MetroFramework.Controls.MetroTextBox();
             this.passwordTextBox = new MetroFramework.Controls.MetroTextBox();
             this.addButton = new MetroFramework.Controls.MetroButton();
-            this.closeButton = new MetroFramework.Controls.MetroButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.metroLink1 = new MetroFramework.Controls.MetroLink();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // hostTextBox
@@ -46,7 +48,7 @@ namespace PassKey.Sliders.MenuSliders
             // 
             // 
             this.hostTextBox.CustomButton.Image = null;
-            this.hostTextBox.CustomButton.Location = new System.Drawing.Point(145, 1);
+            this.hostTextBox.CustomButton.Location = new System.Drawing.Point(147, 1);
             this.hostTextBox.CustomButton.Name = "";
             this.hostTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.hostTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -56,7 +58,7 @@ namespace PassKey.Sliders.MenuSliders
             this.hostTextBox.CustomButton.Visible = false;
             this.hostTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.hostTextBox.Lines = new string[0];
-            this.hostTextBox.Location = new System.Drawing.Point(38, 109);
+            this.hostTextBox.Location = new System.Drawing.Point(36, 80);
             this.hostTextBox.MaxLength = 32767;
             this.hostTextBox.Name = "hostTextBox";
             this.hostTextBox.PasswordChar = '\0';
@@ -66,7 +68,7 @@ namespace PassKey.Sliders.MenuSliders
             this.hostTextBox.SelectionLength = 0;
             this.hostTextBox.SelectionStart = 0;
             this.hostTextBox.ShortcutsEnabled = true;
-            this.hostTextBox.Size = new System.Drawing.Size(167, 23);
+            this.hostTextBox.Size = new System.Drawing.Size(169, 23);
             this.hostTextBox.TabIndex = 0;
             this.hostTextBox.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.hostTextBox.UseSelectable = true;
@@ -80,7 +82,7 @@ namespace PassKey.Sliders.MenuSliders
             // 
             // 
             this.emailTextBox.CustomButton.Image = null;
-            this.emailTextBox.CustomButton.Location = new System.Drawing.Point(145, 1);
+            this.emailTextBox.CustomButton.Location = new System.Drawing.Point(147, 1);
             this.emailTextBox.CustomButton.Name = "";
             this.emailTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.emailTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -90,7 +92,7 @@ namespace PassKey.Sliders.MenuSliders
             this.emailTextBox.CustomButton.Visible = false;
             this.emailTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.emailTextBox.Lines = new string[0];
-            this.emailTextBox.Location = new System.Drawing.Point(38, 198);
+            this.emailTextBox.Location = new System.Drawing.Point(36, 140);
             this.emailTextBox.MaxLength = 32767;
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.PasswordChar = '\0';
@@ -100,7 +102,7 @@ namespace PassKey.Sliders.MenuSliders
             this.emailTextBox.SelectionLength = 0;
             this.emailTextBox.SelectionStart = 0;
             this.emailTextBox.ShortcutsEnabled = true;
-            this.emailTextBox.Size = new System.Drawing.Size(167, 23);
+            this.emailTextBox.Size = new System.Drawing.Size(169, 23);
             this.emailTextBox.TabIndex = 1;
             this.emailTextBox.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.emailTextBox.UseSelectable = true;
@@ -114,7 +116,7 @@ namespace PassKey.Sliders.MenuSliders
             // 
             // 
             this.usernameTextBox.CustomButton.Image = null;
-            this.usernameTextBox.CustomButton.Location = new System.Drawing.Point(145, 1);
+            this.usernameTextBox.CustomButton.Location = new System.Drawing.Point(147, 1);
             this.usernameTextBox.CustomButton.Name = "";
             this.usernameTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.usernameTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -124,7 +126,7 @@ namespace PassKey.Sliders.MenuSliders
             this.usernameTextBox.CustomButton.Visible = false;
             this.usernameTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.usernameTextBox.Lines = new string[0];
-            this.usernameTextBox.Location = new System.Drawing.Point(38, 288);
+            this.usernameTextBox.Location = new System.Drawing.Point(36, 200);
             this.usernameTextBox.MaxLength = 32767;
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.PasswordChar = '\0';
@@ -134,7 +136,7 @@ namespace PassKey.Sliders.MenuSliders
             this.usernameTextBox.SelectionLength = 0;
             this.usernameTextBox.SelectionStart = 0;
             this.usernameTextBox.ShortcutsEnabled = true;
-            this.usernameTextBox.Size = new System.Drawing.Size(167, 23);
+            this.usernameTextBox.Size = new System.Drawing.Size(169, 23);
             this.usernameTextBox.TabIndex = 2;
             this.usernameTextBox.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.usernameTextBox.UseSelectable = true;
@@ -148,7 +150,7 @@ namespace PassKey.Sliders.MenuSliders
             // 
             // 
             this.passwordTextBox.CustomButton.Image = null;
-            this.passwordTextBox.CustomButton.Location = new System.Drawing.Point(145, 1);
+            this.passwordTextBox.CustomButton.Location = new System.Drawing.Point(147, 1);
             this.passwordTextBox.CustomButton.Name = "";
             this.passwordTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.passwordTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -158,7 +160,7 @@ namespace PassKey.Sliders.MenuSliders
             this.passwordTextBox.CustomButton.Visible = false;
             this.passwordTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.passwordTextBox.Lines = new string[0];
-            this.passwordTextBox.Location = new System.Drawing.Point(38, 372);
+            this.passwordTextBox.Location = new System.Drawing.Point(36, 260);
             this.passwordTextBox.MaxLength = 32767;
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '\0';
@@ -168,7 +170,7 @@ namespace PassKey.Sliders.MenuSliders
             this.passwordTextBox.SelectionLength = 0;
             this.passwordTextBox.SelectionStart = 0;
             this.passwordTextBox.ShortcutsEnabled = true;
-            this.passwordTextBox.Size = new System.Drawing.Size(167, 23);
+            this.passwordTextBox.Size = new System.Drawing.Size(169, 23);
             this.passwordTextBox.TabIndex = 3;
             this.passwordTextBox.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.passwordTextBox.UseSelectable = true;
@@ -178,39 +180,55 @@ namespace PassKey.Sliders.MenuSliders
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(38, 463);
+            this.addButton.Location = new System.Drawing.Point(83, 320);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 4;
             this.addButton.Text = "Add";
             this.addButton.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.addButton.UseSelectable = true;
+            this.addButton.UseStyleColors = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
-            // closeButton
+            // pictureBox1
             // 
-            this.closeButton.Location = new System.Drawing.Point(130, 463);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(75, 23);
-            this.closeButton.TabIndex = 5;
-            this.closeButton.Text = "Close";
-            this.closeButton.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.closeButton.UseSelectable = true;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::PassKey.Properties.Resources.add;
+            this.pictureBox1.Location = new System.Drawing.Point(32, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 55);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // metroLink1
+            // 
+            this.metroLink1.BackColor = System.Drawing.Color.Transparent;
+            this.metroLink1.Image = global::PassKey.Properties.Resources.back_Enabled;
+            this.metroLink1.ImageSize = 36;
+            this.metroLink1.Location = new System.Drawing.Point(193, 14);
+            this.metroLink1.Name = "metroLink1";
+            this.metroLink1.NoFocusImage = global::PassKey.Properties.Resources.back_Disabled;
+            this.metroLink1.Size = new System.Drawing.Size(44, 36);
+            this.metroLink1.TabIndex = 6;
+            this.metroLink1.UseCustomBackColor = true;
+            this.metroLink1.UseSelectable = true;
+            this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
             // 
             // AddMenuPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.closeButton);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.metroLink1);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.hostTextBox);
             this.Name = "AddMenuPanel";
-            this.Size = new System.Drawing.Size(240, 500);
+            this.Size = new System.Drawing.Size(240, 400);
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,6 +240,7 @@ namespace PassKey.Sliders.MenuSliders
         private MetroFramework.Controls.MetroTextBox usernameTextBox;
         private MetroFramework.Controls.MetroTextBox passwordTextBox;
         private MetroFramework.Controls.MetroButton addButton;
-        private MetroFramework.Controls.MetroButton closeButton;
+        private MetroFramework.Controls.MetroLink metroLink1;
+        private PictureBox pictureBox1;
     }
 }

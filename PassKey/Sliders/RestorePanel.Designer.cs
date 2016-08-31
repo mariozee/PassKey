@@ -32,30 +32,48 @@ namespace PassKey.Sliders
         private void InitializeComponent()
         {
             this.restoreButton = new MetroFramework.Controls.MetroButton();
-            this.restoreTextBox = new MetroFramework.Controls.MetroTextBox();
             this.browseDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.closeButton = new MetroFramework.Controls.MetroButton();
+            this.hideButton = new MetroFramework.Controls.MetroLink();
+            this.restoreTextBox = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
             // restoreButton
             // 
-            this.restoreButton.Location = new System.Drawing.Point(56, 56);
+            this.restoreButton.Location = new System.Drawing.Point(115, 61);
             this.restoreButton.Name = "restoreButton";
             this.restoreButton.Size = new System.Drawing.Size(75, 23);
             this.restoreButton.TabIndex = 0;
             this.restoreButton.Text = "Restore";
             this.restoreButton.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.restoreButton.UseSelectable = true;
+            this.restoreButton.UseStyleColors = true;
             this.restoreButton.Click += new System.EventHandler(this.restoreButton_Click);
+            // 
+            // hideButton
+            // 
+            this.hideButton.BackColor = System.Drawing.Color.Transparent;
+            this.hideButton.Image = global::PassKey.Properties.Resources.down_Enabled;
+            this.hideButton.ImageSize = 36;
+            this.hideButton.Location = new System.Drawing.Point(248, 53);
+            this.hideButton.Name = "hideButton";
+            this.hideButton.NoFocusImage = global::PassKey.Properties.Resources.down_Disabled;
+            this.hideButton.Size = new System.Drawing.Size(36, 36);
+            this.hideButton.TabIndex = 3;
+            this.hideButton.UseCustomBackColor = true;
+            this.hideButton.UseSelectable = true;
+            this.hideButton.Click += new System.EventHandler(this.hideButton_Click);
             // 
             // restoreTextBox
             // 
             // 
             // 
             // 
-            this.restoreTextBox.CustomButton.Image = null;
+            this.restoreTextBox.CustomButton.BackgroundImage = global::PassKey.Properties.Resources.magnifier;
+            this.restoreTextBox.CustomButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restoreTextBox.CustomButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.restoreTextBox.CustomButton.Image = global::PassKey.Properties.Resources.magnifierB;
             this.restoreTextBox.CustomButton.Location = new System.Drawing.Point(238, 1);
             this.restoreTextBox.CustomButton.Name = "";
             this.restoreTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
@@ -65,8 +83,9 @@ namespace PassKey.Sliders
             this.restoreTextBox.CustomButton.UseSelectable = true;
             this.restoreTextBox.DisplayIcon = true;
             this.restoreTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.restoreTextBox.Icon = global::PassKey.Properties.Resources.magnifier;
             this.restoreTextBox.Lines = new string[0];
-            this.restoreTextBox.Location = new System.Drawing.Point(20, 15);
+            this.restoreTextBox.Location = new System.Drawing.Point(22, 15);
             this.restoreTextBox.MaxLength = 32767;
             this.restoreTextBox.Name = "restoreTextBox";
             this.restoreTextBox.PasswordChar = '\0';
@@ -85,23 +104,12 @@ namespace PassKey.Sliders
             this.restoreTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.restoreTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // closeButton
-            // 
-            this.closeButton.Location = new System.Drawing.Point(169, 56);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(75, 23);
-            this.closeButton.TabIndex = 2;
-            this.closeButton.Text = "Close";
-            this.closeButton.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.closeButton.UseSelectable = true;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            // 
             // RestorePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Peru;
-            this.Controls.Add(this.closeButton);
+            this.Controls.Add(this.hideButton);
             this.Controls.Add(this.restoreTextBox);
             this.Controls.Add(this.restoreButton);
             this.Name = "RestorePanel";
@@ -118,6 +126,6 @@ namespace PassKey.Sliders
         private FolderBrowserDialog browseDialog;
         private OpenFileDialog openFileDialog;
         private SaveFileDialog saveFileDialog1;
-        private MetroFramework.Controls.MetroButton closeButton;
+        private MetroFramework.Controls.MetroLink hideButton;
     }
 }

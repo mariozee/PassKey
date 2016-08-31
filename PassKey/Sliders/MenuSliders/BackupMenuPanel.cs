@@ -21,6 +21,7 @@ namespace PassKey.Sliders.MenuSliders
             : base(form, user)
         {
             InitializeComponent();
+            this.backupButton.UseSelectable = false;
             this.backupTextBox.ButtonClick += BackupTextBox_ButtonClick;
         }
 
@@ -54,7 +55,7 @@ namespace PassKey.Sliders.MenuSliders
             }
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
+        private void closeLink_Click(object sender, EventArgs e)
         {
             this.Swipe(false);
         }

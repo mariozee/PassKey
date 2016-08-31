@@ -22,6 +22,7 @@ namespace PassKey.Sliders.MenuSliders
             : base(form, user)
         {
             InitializeComponent();
+            this.changeButton.UseSelectable = false;
         }
 
         private void changeButton_Click(object sender, EventArgs e)
@@ -86,7 +87,7 @@ namespace PassKey.Sliders.MenuSliders
             }
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
+        private void backLink_Click(object sender, EventArgs e)
         {
             this.Swipe(false);
         }

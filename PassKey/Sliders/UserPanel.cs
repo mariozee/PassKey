@@ -38,19 +38,57 @@ namespace PassKey.Sliders
             this.ActiveControl = dataGrid;
         }
 
-        private void addButton_Click(object sender, EventArgs e)
+        public void Logout()
         {
-            AddMenuPanel addPanel = new AddMenuPanel(this.MainForm, this.user);
-            addPanel.Swipe(true);
+            LoginPanel loginPanel = new LoginPanel(this.MainForm);
+            this.Swipe(false);
+            loginPanel.Swipe(true);
         }
 
-        private void editButton_Click(object sender, EventArgs e)
+        private void deleteAccountLink_Click(object sender, EventArgs e)
         {
-            EditMenuPanel editPanel = new EditMenuPanel(this.MainForm, this.user, this.dataGrid);
-            editPanel.Swipe(true);
+            AccountDeletePanel deletePanel = new AccountDeletePanel(this.MainForm, this.user, this);
+            DialogResult result = MetroMessageBox.Show(this.MainForm, string.Empty
+                , "Your account will be deleted permanently. Do you want to continue?"
+                , MessageBoxButtons.YesNo, MessageBoxIcon.Warning, 100);
+
+            if (result == DialogResult.Yes)
+            {
+                deletePanel.Swipe(true);
+            }
         }
 
-        private void removeButton_Click(object sender, EventArgs e)
+        private void showPassLink_Click(object sender, EventArgs e)
+        {
+            this.showPassLink.Enabled = false;
+            this.passowrdPanel = new PasswordPanel(this.MainForm, this.dataGrid);
+            this.passowrdPanel.Closed += PassowrdPanel_Closed;
+            this.passowrdPanel.Swipe(true);
+        }        
+
+        private void backupLink_Click(object sender, EventArgs e)
+        {
+            BackupMenuPanel backupSlider = new BackupMenuPanel(this.MainForm, this.user);
+            backupSlider.Swipe(true);
+        }
+
+        private void PassowrdPanel_Closed(object sender, EventArgs e)
+        {
+            this.showPassLink.Enabled = true;
+        }
+
+        private void logoutLink_Click(object sender, EventArgs e)
+        {
+            this.Logout();
+        }
+
+        private void changePassLink_Click(object sender, EventArgs e)
+        {
+            ChangePasswordPanel changePasswordPanel = new ChangePasswordPanel(this.MainForm, this.user);
+            changePasswordPanel.Swipe(true);
+        }
+
+        private void removeLink_Click(object sender, EventArgs e)
         {
             DialogResult result = MetroMessageBox.Show(
                 this
@@ -68,80 +106,16 @@ namespace PassKey.Sliders
             }
         }
 
-        private void backupRestoreButton_Click(object sender, EventArgs e)
+        private void editLink_Click(object sender, EventArgs e)
         {
-            BackupMenuPanel backupSlider = new BackupMenuPanel(this.MainForm, this.user);
-            backupSlider.Swipe(true);
+            EditMenuPanel editPanel = new EditMenuPanel(this.MainForm, this.user, this.dataGrid);
+            editPanel.Swipe(true);
         }
 
-        private void chnageButton_Click(object sender, EventArgs e)
+        private void addLink_Click(object sender, EventArgs e)
         {
-            ChangePasswordPanel changePasswordPanel = new ChangePasswordPanel(this.MainForm, this.user);
-            changePasswordPanel.Swipe(true);
-        }
-
-        private void deleteButton_Click(object sender, EventArgs e)
-        {
-            AccountDeletePanel deletePanel = new AccountDeletePanel(this.MainForm, this.user, this);
-            DialogResult result = MetroMessageBox.Show(this.MainForm, string.Empty
-                , "Your account will be deleted permanently. Do you want to continue?"
-                , MessageBoxButtons.YesNo, MessageBoxIcon.Warning, 100);
-
-            if (result == DialogResult.Yes)
-            {
-                deletePanel.Swipe(true);
-            }
-        }
-
-        private void logout_Click(object sender, EventArgs e)
-        {
-            this.Logout();
-        }
-
-        public void Logout()
-        {
-            LoginPanel loginPanel = new LoginPanel(this.MainForm);
-            this.Swipe(false);
-            loginPanel.Swipe(true);
-        }
-
-        private void showButton_Click(object sender, EventArgs e)
-        {
-            this.showButton.Enabled = false;
-            this.passowrdPanel = new PasswordPanel(this.MainForm, this.dataGrid);
-            this.passowrdPanel.Closed += PassowrdPanel_Closed;
-            this.passowrdPanel.Swipe(true);           
-        }
-
-        private void PassowrdPanel_Closed(object sender, EventArgs e)
-        {
-            this.showButton.Enabled = true;
-        }
-
-        private void deleteAccountLink_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void deleteAccountLink_MouseEnter(object sender, EventArgs e)
-        {
-            this.deleteAccountLink.UseCustomForeColor = true;
-        }
-
-        private void deleteAccountLink_MouseLeave(object sender, EventArgs e)
-        {
-            this.deleteAccountLink.UseCustomForeColor = false;
-        }
-
-        private void deleteAccountLink_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.deleteAccountLink.UseCustomForeColor = false;
-        }
-
-        private void deleteAccountLink_MouseUp(object sender, MouseEventArgs e)
-        {
-            this.deleteAccountLink.UseCustomForeColor = true;
-            this.deleteAccountLink.Refresh();
+            AddMenuPanel addPanel = new AddMenuPanel(this.MainForm, this.user);
+            addPanel.Swipe(true);
         }
     }
 }

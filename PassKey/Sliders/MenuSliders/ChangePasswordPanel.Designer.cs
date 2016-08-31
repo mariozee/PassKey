@@ -32,35 +32,27 @@ namespace PassKey.Sliders.MenuSliders
         private void InitializeComponent()
         {
             this.changeButton = new MetroFramework.Controls.MetroButton();
-            this.closeButton = new MetroFramework.Controls.MetroButton();
             this.oldPasswordTextBox = new MetroFramework.Controls.MetroTextBox();
             this.newPassTextBox = new MetroFramework.Controls.MetroTextBox();
             this.confirmNewPassTextBox = new MetroFramework.Controls.MetroTextBox();
             this.oldPassLabel = new MetroFramework.Controls.MetroLabel();
             this.newPassLabel = new MetroFramework.Controls.MetroLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.backLink = new MetroFramework.Controls.MetroLink();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // changeButton
             // 
-            this.changeButton.Location = new System.Drawing.Point(13, 423);
+            this.changeButton.Location = new System.Drawing.Point(83, 260);
             this.changeButton.Name = "changeButton";
             this.changeButton.Size = new System.Drawing.Size(75, 23);
             this.changeButton.TabIndex = 0;
             this.changeButton.Text = "Change";
             this.changeButton.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.changeButton.UseSelectable = true;
+            this.changeButton.UseStyleColors = true;
             this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
-            // 
-            // closeButton
-            // 
-            this.closeButton.Location = new System.Drawing.Point(119, 423);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(75, 23);
-            this.closeButton.TabIndex = 1;
-            this.closeButton.Text = "Close";
-            this.closeButton.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.closeButton.UseSelectable = true;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // oldPasswordTextBox
             // 
@@ -77,7 +69,7 @@ namespace PassKey.Sliders.MenuSliders
             this.oldPasswordTextBox.CustomButton.UseSelectable = true;
             this.oldPasswordTextBox.CustomButton.Visible = false;
             this.oldPasswordTextBox.Lines = new string[0];
-            this.oldPasswordTextBox.Location = new System.Drawing.Point(25, 113);
+            this.oldPasswordTextBox.Location = new System.Drawing.Point(36, 80);
             this.oldPasswordTextBox.MaxLength = 32767;
             this.oldPasswordTextBox.Name = "oldPasswordTextBox";
             this.oldPasswordTextBox.PasswordChar = '\0';
@@ -110,7 +102,7 @@ namespace PassKey.Sliders.MenuSliders
             this.newPassTextBox.CustomButton.UseSelectable = true;
             this.newPassTextBox.CustomButton.Visible = false;
             this.newPassTextBox.Lines = new string[0];
-            this.newPassTextBox.Location = new System.Drawing.Point(25, 192);
+            this.newPassTextBox.Location = new System.Drawing.Point(36, 140);
             this.newPassTextBox.MaxLength = 32767;
             this.newPassTextBox.Name = "newPassTextBox";
             this.newPassTextBox.PasswordChar = '\0';
@@ -143,7 +135,7 @@ namespace PassKey.Sliders.MenuSliders
             this.confirmNewPassTextBox.CustomButton.UseSelectable = true;
             this.confirmNewPassTextBox.CustomButton.Visible = false;
             this.confirmNewPassTextBox.Lines = new string[0];
-            this.confirmNewPassTextBox.Location = new System.Drawing.Point(25, 271);
+            this.confirmNewPassTextBox.Location = new System.Drawing.Point(36, 200);
             this.confirmNewPassTextBox.MaxLength = 32767;
             this.confirmNewPassTextBox.Name = "confirmNewPassTextBox";
             this.confirmNewPassTextBox.PasswordChar = '\0';
@@ -166,7 +158,7 @@ namespace PassKey.Sliders.MenuSliders
             this.oldPassLabel.AutoSize = true;
             this.oldPassLabel.FontSize = MetroFramework.MetroLabelSize.Small;
             this.oldPassLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.oldPassLabel.Location = new System.Drawing.Point(25, 95);
+            this.oldPassLabel.Location = new System.Drawing.Point(36, 62);
             this.oldPassLabel.Name = "oldPassLabel";
             this.oldPassLabel.Size = new System.Drawing.Size(58, 15);
             this.oldPassLabel.Style = MetroFramework.MetroColorStyle.Red;
@@ -176,13 +168,13 @@ namespace PassKey.Sliders.MenuSliders
             this.oldPassLabel.UseStyleColors = true;
             this.oldPassLabel.Visible = false;
             // 
-            // newPassLabel2
+            // newPassLabel
             // 
             this.newPassLabel.AutoSize = true;
             this.newPassLabel.FontSize = MetroFramework.MetroLabelSize.Small;
             this.newPassLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.newPassLabel.Location = new System.Drawing.Point(25, 174);
-            this.newPassLabel.Name = "newPassLabel2";
+            this.newPassLabel.Location = new System.Drawing.Point(36, 122);
+            this.newPassLabel.Name = "newPassLabel";
             this.newPassLabel.Size = new System.Drawing.Size(58, 15);
             this.newPassLabel.Style = MetroFramework.MetroColorStyle.Red;
             this.newPassLabel.TabIndex = 7;
@@ -191,20 +183,46 @@ namespace PassKey.Sliders.MenuSliders
             this.newPassLabel.UseStyleColors = true;
             this.newPassLabel.Visible = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::PassKey.Properties.Resources.changePass;
+            this.pictureBox1.Location = new System.Drawing.Point(32, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 55);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // backLink
+            // 
+            this.backLink.BackColor = System.Drawing.Color.Transparent;
+            this.backLink.Image = global::PassKey.Properties.Resources.back_Enabled;
+            this.backLink.ImageSize = 36;
+            this.backLink.Location = new System.Drawing.Point(193, 14);
+            this.backLink.Name = "backLink";
+            this.backLink.NoFocusImage = global::PassKey.Properties.Resources.back_Disabled;
+            this.backLink.Size = new System.Drawing.Size(44, 36);
+            this.backLink.TabIndex = 8;
+            this.backLink.UseCustomBackColor = true;
+            this.backLink.UseSelectable = true;
+            this.backLink.Click += new System.EventHandler(this.backLink_Click);
+            // 
             // ChangePasswordPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.backLink);
             this.Controls.Add(this.newPassLabel);
             this.Controls.Add(this.oldPassLabel);
             this.Controls.Add(this.confirmNewPassTextBox);
             this.Controls.Add(this.newPassTextBox);
             this.Controls.Add(this.oldPasswordTextBox);
-            this.Controls.Add(this.closeButton);
             this.Controls.Add(this.changeButton);
             this.Name = "ChangePasswordPanel";
-            this.Size = new System.Drawing.Size(240, 500);
+            this.Size = new System.Drawing.Size(240, 400);
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,11 +231,12 @@ namespace PassKey.Sliders.MenuSliders
         #endregion
 
         private MetroFramework.Controls.MetroButton changeButton;
-        private MetroFramework.Controls.MetroButton closeButton;
         private MetroFramework.Controls.MetroTextBox oldPasswordTextBox;
         private MetroFramework.Controls.MetroTextBox newPassTextBox;
         private MetroFramework.Controls.MetroTextBox confirmNewPassTextBox;
         private MetroFramework.Controls.MetroLabel oldPassLabel;
         private MetroFramework.Controls.MetroLabel newPassLabel;
+        private MetroFramework.Controls.MetroLink backLink;
+        private PictureBox pictureBox1;
     }
 }

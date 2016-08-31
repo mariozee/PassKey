@@ -117,27 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="deleteAccountLink.NoFocusImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAM2SURBVGhD7ZqNbdswEIU9gkfwCNmgGSEb1Jv4ZxF3A3eDZgNnA2eDdoP2fcHRuF4pUaQkOyj0
-        gIcG5Ls/STxSVlcLFixYMBv2+/3mcDh81b8n8Yf4u4PMnUy7MfPPA0vsbMm28IwPc/c4KJEX8eoSG0t8
-        vZj7+0FB12LfHXkTwVZ8DmQMoMnZQnyvLdy8UKAn8acF9iRBkh2cCFqzyRVHjCeTzgMFIHgM/C5uTdIM
-        fJiv6H+07yxwHALBbzY9GfAZYsBpi5JDHrN5gzjgO8SC0zx+csRzHtfMs03PBsWgg/qY5DC+UchJ7Gaz
-        3ZkIYoXYZ5tqgxzEqzT5mimBmCGH9n1Kxn7TfLfhu4PYLo+rDddBhvF2Fx81aWgetftQcbETW6zK5R/s
-        drvvzsGbDXdCmrThXsRiUWhMO2gDlea2+ZKbDQ+DjDbJ2Nh7RTQfTw+9RTFnmqQvFqX5eJeGn9Izxr1X
-        nHkxHl+yRTFmc16L7ZAY3mb4Yyex7yyvNtwL6YpF8beNeU2xmATTJrvhHVfiV2e4t+EiJO0sythcDJAW
-        JNtBF/oDzghWdRTpu4oaVQyQ/q+lYMNleCOx+pgjm1xRntXFANnwPnXzY8NleCOx6dwmu66imooBsnt4
-        QfExgx9rymRVkN1jCpJNVzGJTUXJZpKCWppCrgHEx6+6KOmbm8KYtp0rhnE4qihpQbKtatutG2u2GJMk
-        TXNRpk12VRtry9Gnt5gExmzOa4tFMe/0sOro03I4/eX02WISmDNN0mM73+EUhNeHiw13QppUVG8xCWhM
-        WywGSHN7AqpfH4AM4xUp3mJpPu8LHpDh+FffCUBsl0f7TwEyjj+SnGzqbiBmyGHcT2hhLcG2290AYvnY
-        TWsnQo54zn0Hg7N/8iBGiEkOg9dnL+SIxe6dw9nuFL5DLFhsHlWQw1yQydcUPkMMOM/Fw3EIBK9TfE60
-        z5q5r4HzrlkFiKeCxIslVbUPmU08NsFBG+4kUKB1pvt5UtyOZI/H4xdPxphDE2xuNN/TNIAaKCidKPfV
-        rZX4uv9H4wglsS3csV6a7d32t8FQUpzSaRy8T/mXxEjm0KD9fP/xYsGCBf8LVqs/RXgp8Fi0s7UAAAAA
-        SUVORK5CYII=
-</value>
-  </data>
   <metadata name="userDataInfoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

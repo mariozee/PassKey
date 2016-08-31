@@ -77,6 +77,11 @@
     <Compile Include="Exceptions\PasswordMismatchException.cs" />
     <Compile Include="Exceptions\UsernameAlreadyUsedException.cs" />
     <Compile Include="GlobalMessages.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SecurityUtilities\CryptographicUtilities.cs" />
     <Compile Include="SecurityUtilities\HashUtilities.cs" />
     <Compile Include="MainForm.cs">
@@ -159,43 +164,48 @@
     <Compile Include="UsersInputValidators\RegistrationValidator.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Sliders\LoginPanel.resx">
       <DependentUpon>LoginPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Sliders\MenuSliders\AccountDeletePanel.resx">
       <DependentUpon>AccountDeletePanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Sliders\MenuSliders\AddMenuPanel.resx">
       <DependentUpon>AddMenuPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Sliders\MenuSliders\BackupMenuPanel.resx">
       <DependentUpon>BackupMenuPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Sliders\MenuSliders\ChangePasswordPanel.resx">
       <DependentUpon>ChangePasswordPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Sliders\MenuSliders\EditMenuPanel.resx">
       <DependentUpon>EditMenuPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Sliders\MenuSliders\PasswordPanel.resx">
       <DependentUpon>PasswordPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Sliders\RestorePanel.resx">
       <DependentUpon>RestorePanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Sliders\UserPanel.resx">
       <DependentUpon>UserPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\PassKey.UserInfo.UserDataInfo.datasource" />
@@ -213,12 +223,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\deleteAccout-Enabled.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\deleteAccount-Disabled.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\username.png" />
   </ItemGroup>
   <ItemGroup>
@@ -229,6 +233,96 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifierB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down-Enabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down-Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addMenuDis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addMenuEn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backupMenuDis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backupMenuEn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changePassMenuDis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changePassMenuEn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delAccMenuDis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delAccMenuEn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editMenuDis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editMenuEn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logMenuDis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logMenuEn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removeMenuDis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removeMenuEn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showPassMenuDis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showPassMenuEn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-Enabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changePass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize-Enabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize-Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-Enabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-Disabled.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

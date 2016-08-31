@@ -42,6 +42,9 @@ namespace PassKey.Sliders
             this.loginValidator = new LoginValidator();
             this.regHandler = new RegistrationHandler();
             this.regValidator = new RegistrationValidator();
+            this.regButton.UseSelectable = false;
+            this.logButton.UseSelectable = false;
+            this.Select();
         }
 
         private void logButton_Click(object sender, EventArgs e)
@@ -119,5 +122,14 @@ namespace PassKey.Sliders
             this.Swipe(false);
             this.userPanel.Swipe(true);
         }
+
+        private void restoreLink_MouseDown(object sender, MouseEventArgs e)
+            => this.restoreLink.UseCustomForeColor = false;
+
+        private void restoreLink_MouseEnter(object sender, EventArgs e)
+            => this.restoreLink.UseCustomForeColor = true;
+
+        private void restoreLink_MouseLeave(object sender, EventArgs e)
+            => this.restoreLink.UseCustomForeColor = false;
     }
 }

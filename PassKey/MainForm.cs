@@ -32,5 +32,15 @@ namespace PassKey
         {
             Environment.Exit(1);
         }
+
+        private void closeLink_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
+        }
+
+        private void minimizeLink_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

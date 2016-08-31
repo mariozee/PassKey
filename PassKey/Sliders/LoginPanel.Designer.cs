@@ -86,7 +86,7 @@ namespace PassKey.Sliders
             this.passLabel.AutoSize = true;
             this.passLabel.FontSize = MetroFramework.MetroLabelSize.Small;
             this.passLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.passLabel.Location = new System.Drawing.Point(493, 230);
+            this.passLabel.Location = new System.Drawing.Point(493, 232);
             this.passLabel.Name = "passLabel";
             this.passLabel.Size = new System.Drawing.Size(58, 15);
             this.passLabel.Style = MetroFramework.MetroColorStyle.Red;
@@ -113,33 +113,43 @@ namespace PassKey.Sliders
             // 
             // restoreLink
             // 
-            this.restoreLink.Location = new System.Drawing.Point(528, 345);
+            this.restoreLink.BackColor = System.Drawing.Color.Transparent;
+            this.restoreLink.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.restoreLink.Location = new System.Drawing.Point(531, 330);
             this.restoreLink.Name = "restoreLink";
             this.restoreLink.Size = new System.Drawing.Size(111, 23);
             this.restoreLink.TabIndex = 8;
             this.restoreLink.Text = "Restore account";
-            this.restoreLink.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.restoreLink.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.restoreLink.UseCustomBackColor = true;
             this.restoreLink.UseSelectable = true;
             this.restoreLink.Click += new System.EventHandler(this.restoreLink_Click);
+            this.restoreLink.MouseDown += new System.Windows.Forms.MouseEventHandler(this.restoreLink_MouseDown);
+            this.restoreLink.MouseEnter += new System.EventHandler(this.restoreLink_MouseEnter);
+            this.restoreLink.MouseLeave += new System.EventHandler(this.restoreLink_MouseLeave);
             // 
             // logButton
             // 
-            this.logButton.Location = new System.Drawing.Point(556, 316);
+            this.logButton.Location = new System.Drawing.Point(547, 300);
             this.logButton.Name = "logButton";
             this.logButton.Size = new System.Drawing.Size(75, 23);
-            this.logButton.TabIndex = 7;
+            this.logButton.TabIndex = 3;
             this.logButton.Text = "Login";
+            this.logButton.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.logButton.UseSelectable = true;
+            this.logButton.UseStyleColors = true;
             this.logButton.Click += new System.EventHandler(this.logButton_Click);
             // 
             // regButton
             // 
-            this.regButton.Location = new System.Drawing.Point(78, 345);
+            this.regButton.Location = new System.Drawing.Point(93, 330);
             this.regButton.Name = "regButton";
             this.regButton.Size = new System.Drawing.Size(75, 23);
-            this.regButton.TabIndex = 6;
+            this.regButton.TabIndex = 7;
             this.regButton.Text = "Register";
+            this.regButton.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.regButton.UseSelectable = true;
+            this.regButton.UseStyleColors = true;
             this.regButton.Click += new System.EventHandler(this.regButton_Click);
             // 
             // logingLabel
@@ -227,7 +237,7 @@ namespace PassKey.Sliders
             this.passowrdTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.passowrdTextBox.Icon = global::PassKey.Properties.Resources.password;
             this.passowrdTextBox.Lines = new string[0];
-            this.passowrdTextBox.Location = new System.Drawing.Point(493, 248);
+            this.passowrdTextBox.Location = new System.Drawing.Point(495, 250);
             this.passowrdTextBox.MaxLength = 32767;
             this.passowrdTextBox.Name = "passowrdTextBox";
             this.passowrdTextBox.PasswordChar = '\0';
@@ -263,7 +273,7 @@ namespace PassKey.Sliders
             this.userNameTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.userNameTextBox.Icon = global::PassKey.Properties.Resources.username;
             this.userNameTextBox.Lines = new string[0];
-            this.userNameTextBox.Location = new System.Drawing.Point(493, 185);
+            this.userNameTextBox.Location = new System.Drawing.Point(495, 185);
             this.userNameTextBox.MaxLength = 32767;
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.PasswordChar = '\0';
@@ -299,7 +309,7 @@ namespace PassKey.Sliders
             this.confirmPassRegTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.confirmPassRegTextBox.Icon = global::PassKey.Properties.Resources.password;
             this.confirmPassRegTextBox.Lines = new string[0];
-            this.confirmPassRegTextBox.Location = new System.Drawing.Point(37, 281);
+            this.confirmPassRegTextBox.Location = new System.Drawing.Point(43, 280);
             this.confirmPassRegTextBox.MaxLength = 32767;
             this.confirmPassRegTextBox.Name = "confirmPassRegTextBox";
             this.confirmPassRegTextBox.PasswordChar = '\0';
@@ -310,7 +320,7 @@ namespace PassKey.Sliders
             this.confirmPassRegTextBox.SelectionStart = 0;
             this.confirmPassRegTextBox.ShortcutsEnabled = true;
             this.confirmPassRegTextBox.Size = new System.Drawing.Size(178, 25);
-            this.confirmPassRegTextBox.TabIndex = 5;
+            this.confirmPassRegTextBox.TabIndex = 6;
             this.confirmPassRegTextBox.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.confirmPassRegTextBox.UseSelectable = true;
             this.confirmPassRegTextBox.WaterMark = "Confirm password";
@@ -335,7 +345,7 @@ namespace PassKey.Sliders
             this.passRegTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.passRegTextBox.Icon = global::PassKey.Properties.Resources.password;
             this.passRegTextBox.Lines = new string[0];
-            this.passRegTextBox.Location = new System.Drawing.Point(37, 213);
+            this.passRegTextBox.Location = new System.Drawing.Point(43, 215);
             this.passRegTextBox.MaxLength = 32767;
             this.passRegTextBox.Name = "passRegTextBox";
             this.passRegTextBox.PasswordChar = '\0';
@@ -346,7 +356,7 @@ namespace PassKey.Sliders
             this.passRegTextBox.SelectionStart = 0;
             this.passRegTextBox.ShortcutsEnabled = true;
             this.passRegTextBox.Size = new System.Drawing.Size(178, 25);
-            this.passRegTextBox.TabIndex = 4;
+            this.passRegTextBox.TabIndex = 5;
             this.passRegTextBox.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.passRegTextBox.UseSelectable = true;
             this.passRegTextBox.WaterMark = "Password";
@@ -371,7 +381,7 @@ namespace PassKey.Sliders
             this.userRegTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.userRegTextBox.Icon = global::PassKey.Properties.Resources.username;
             this.userRegTextBox.Lines = new string[0];
-            this.userRegTextBox.Location = new System.Drawing.Point(37, 150);
+            this.userRegTextBox.Location = new System.Drawing.Point(43, 150);
             this.userRegTextBox.MaxLength = 32767;
             this.userRegTextBox.Name = "userRegTextBox";
             this.userRegTextBox.PasswordChar = '\0';
@@ -382,7 +392,7 @@ namespace PassKey.Sliders
             this.userRegTextBox.SelectionStart = 0;
             this.userRegTextBox.ShortcutsEnabled = true;
             this.userRegTextBox.Size = new System.Drawing.Size(178, 25);
-            this.userRegTextBox.TabIndex = 3;
+            this.userRegTextBox.TabIndex = 4;
             this.userRegTextBox.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.userRegTextBox.UseSelectable = true;
             this.userRegTextBox.WaterMark = "Username";

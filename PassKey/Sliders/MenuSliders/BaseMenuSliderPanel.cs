@@ -19,9 +19,9 @@ namespace PassKey.Sliders.MenuSliders
         }
 
         private const int OpenXConst = 660;
-        private const int OpenYConst = 80;
+        private const int OpenYConst = 180;
         private const int ClosedXConst = 900;
-        private const int ClosedYConst = 80;
+        private const int ClosedYConst = 180;
         private const string TransitionDirectionConst = "Left";
         private const int TransitionAccelerationConst = 500;
         private const int DestinationOpenConst = 660;

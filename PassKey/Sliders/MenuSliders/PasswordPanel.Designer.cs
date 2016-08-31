@@ -35,6 +35,7 @@
             // 
             // passwordLabel
             // 
+            this.passwordLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
             this.passwordLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.passwordLabel.Location = new System.Drawing.Point(0, 0);
             this.passwordLabel.Name = "passwordLabel";
@@ -47,7 +48,7 @@
             // 
             // passwordShowTimer
             // 
-            this.passwordShowTimer.Interval = 3000;
+            this.passwordShowTimer.Interval = 2500;
             this.passwordShowTimer.Tick += new System.EventHandler(this.passwordShowTimer_Tick);
             // 
             // PasswordPanel

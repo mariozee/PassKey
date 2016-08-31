@@ -24,6 +24,7 @@ namespace PassKey.Sliders.MenuSliders
         {
             this.InitializeComponent();
             this.userPanel = userPanel;
+            this.deleteButton.UseSelectable = false;
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -47,7 +48,7 @@ namespace PassKey.Sliders.MenuSliders
             }
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
+        private void closeLink_Click(object sender, EventArgs e)
         {
             this.Swipe(false);
         }

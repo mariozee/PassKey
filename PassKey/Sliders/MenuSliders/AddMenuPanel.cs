@@ -18,7 +18,8 @@ namespace PassKey.Sliders.MenuSliders
         public AddMenuPanel(Form form, LoggedUser user)
             : base(form, user)
         {
-            InitializeComponent();           
+            InitializeComponent();
+            this.addButton.UseSelectable = false;        
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -35,7 +36,7 @@ namespace PassKey.Sliders.MenuSliders
             this.passwordTextBox.Clear();
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
+        private void metroLink1_Click(object sender, EventArgs e)
         {
             this.Swipe(false);
         }

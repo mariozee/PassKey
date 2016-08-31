@@ -23,6 +23,7 @@ namespace PassKey.Sliders.MenuSliders
         {
             InitializeComponent();
             this.dataGrid = dataGrid;
+            this.doneButton.UseSelectable = false;
             GetItemToEdit(dataGrid);    
         }        
 
@@ -40,7 +41,7 @@ namespace PassKey.Sliders.MenuSliders
             this.passwordTextBox.Text = password;
 
             this.dataGrid.Enabled = false;    
-        }       
+        }
 
         private void doneButton_Click(object sender, EventArgs e)
         {
@@ -55,7 +56,7 @@ namespace PassKey.Sliders.MenuSliders
             this.Swipe(false);
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
+        private void metroLink1_Click(object sender, EventArgs e)
         {
             this.dataGrid.Enabled = true;
             this.Swipe(false);

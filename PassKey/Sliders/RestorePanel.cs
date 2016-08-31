@@ -26,7 +26,6 @@ namespace PassKey.Sliders
         private const int DestinationOpenConst = 500;
         private const int DestinationClosedConst = 600;
 
-        private Form mainForm;
         private LoginPanel loginPanel;
 
         public RestorePanel(Form form, LoginPanel loginPanel)
@@ -36,7 +35,7 @@ namespace PassKey.Sliders
             InitializeComponent();
             this.restoreTextBox.ButtonClick += RestoreTextBox_ButtonClick;
             this.loginPanel = loginPanel;
-            this.mainForm = form;
+            this.restoreButton.UseSelectable = false;
         }
 
         private void RestoreTextBox_ButtonClick(object sender, EventArgs e)
@@ -56,7 +55,7 @@ namespace PassKey.Sliders
                 {
                     RegistryData.SetRestoredData(enryptedData);
 
-                    MetroMessageBox.Show(this.mainForm, string.Empty, "Restore completed!"
+                    MetroMessageBox.Show(this.MainForm, string.Empty, "Restore completed!"
                         , MessageBoxButtons.OK, MessageBoxIcon.Information, 80);
 
                     this.loginPanel.Enabled = true;
@@ -65,13 +64,20 @@ namespace PassKey.Sliders
                 }
                 else
                 {
-                    MetroMessageBox.Show(this.mainForm, string.Empty, "Wrong or corrupted data file!"
+                    MetroMessageBox.Show(this.MainForm, string.Empty, "Wrong or corrupted data file!"
                         , MessageBoxButtons.OK, MessageBoxIcon.Error, 80);
                 }               
             }
         }
 
         private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.loginPanel.Enabled = true;
+            this.loginPanel.Refresh();
+            this.Swipe(false);
+        }
+
+        private void hideButton_Click(object sender, EventArgs e)
         {
             this.loginPanel.Enabled = true;
             this.loginPanel.Refresh();
