@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PassKey.UserInfo
 {
-    public class UserDataInfo
+    public class UserDataInfo : IComparable<UserDataInfo>
     {
         public UserDataInfo(string hostName, string email, string username, string password)
         {
@@ -23,5 +23,10 @@ namespace PassKey.UserInfo
         public string Username { get; set; }
 
         public string Password { get; set; }
+
+        public int CompareTo(UserDataInfo other)
+        {
+            return this.HostName.CompareTo(other.HostName);
+        }
     }
 }

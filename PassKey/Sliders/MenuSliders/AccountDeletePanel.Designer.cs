@@ -55,7 +55,7 @@
             this.passwordTextBox.Location = new System.Drawing.Point(36, 80);
             this.passwordTextBox.MaxLength = 32767;
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.PasswordChar = '\0';
+            this.passwordTextBox.PasswordChar = '●';
             this.passwordTextBox.PromptText = "Enter password";
             this.passwordTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.passwordTextBox.SelectedText = "";
@@ -66,21 +66,22 @@
             this.passwordTextBox.TabIndex = 0;
             this.passwordTextBox.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.passwordTextBox.UseSelectable = true;
+            this.passwordTextBox.UseSystemPasswordChar = true;
             this.passwordTextBox.WaterMark = "Enter password";
             this.passwordTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.passwordTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // passwordLabel
             // 
-            this.passwordLabel.AutoSize = true;
             this.passwordLabel.FontSize = MetroFramework.MetroLabelSize.Small;
             this.passwordLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.passwordLabel.Location = new System.Drawing.Point(36, 62);
+            this.passwordLabel.Location = new System.Drawing.Point(0, 61);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(95, 15);
+            this.passwordLabel.Size = new System.Drawing.Size(237, 16);
             this.passwordLabel.Style = MetroFramework.MetroColorStyle.Red;
             this.passwordLabel.TabIndex = 1;
             this.passwordLabel.Text = "invalid password";
+            this.passwordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.passwordLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.passwordLabel.UseStyleColors = true;
             this.passwordLabel.Visible = false;
@@ -135,7 +136,6 @@
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

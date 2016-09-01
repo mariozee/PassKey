@@ -130,6 +130,9 @@
   <data name="delAccMenuDis" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delAccMenuDis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="azEn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\azEn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="username" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\username.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,14 +145,23 @@
   <data name="removeMenuEn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\removeMenuEn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backupMenuEn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backupMenuEn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="infoEn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\infoEn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="infoDis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\infoDis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logMenuEn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logMenuEn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="gmailNoFocus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gmailNoFocus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="changePassMenuEn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\changePassMenuEn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="changePassMenuDis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\changePassMenuDis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="backupMenuDis" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backupMenuDis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,11 +169,20 @@
   <data name="editMenuDis" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\editMenuDis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="backupMenuEn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backupMenuEn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="down-Enabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\down-Enabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="addMenuEn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addMenuEn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="changePassMenuDis" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\changePassMenuDis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="githubNoFocus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\githubNoFocus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,8 +193,8 @@
   <data name="register" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\register.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close-Enabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close-Enabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="azDis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\azDis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -186,6 +207,9 @@
   </data>
   <data name="minimize-Enabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimize-Enabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zaDis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zaDis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="showPassMenuDis" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\showPassMenuDis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,22 +226,34 @@
   <data name="minimize-Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimize-Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="close-Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close-Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="githubFocus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\githubFocus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="back-Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back-Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="down-Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\down-Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="zaEn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zaEn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="backup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gmailFocus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gmailFocus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="back-Enabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back-Enabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="down-Enabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\down-Enabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="close-Enabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close-Enabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close-Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close-Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

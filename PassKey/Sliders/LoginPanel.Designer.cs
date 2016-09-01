@@ -53,60 +53,60 @@ namespace PassKey.Sliders
             // 
             // passRegLabel
             // 
-            this.passRegLabel.AutoSize = true;
             this.passRegLabel.FontSize = MetroFramework.MetroLabelSize.Small;
             this.passRegLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.passRegLabel.Location = new System.Drawing.Point(37, 193);
+            this.passRegLabel.Location = new System.Drawing.Point(3, 197);
             this.passRegLabel.Name = "passRegLabel";
-            this.passRegLabel.Size = new System.Drawing.Size(58, 15);
+            this.passRegLabel.Size = new System.Drawing.Size(255, 15);
             this.passRegLabel.Style = MetroFramework.MetroColorStyle.Red;
             this.passRegLabel.TabIndex = 12;
             this.passRegLabel.Text = "error here";
+            this.passRegLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.passRegLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.passRegLabel.UseStyleColors = true;
             this.passRegLabel.Visible = false;
             // 
             // userRegLabel
             // 
-            this.userRegLabel.AutoSize = true;
             this.userRegLabel.FontSize = MetroFramework.MetroLabelSize.Small;
             this.userRegLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.userRegLabel.Location = new System.Drawing.Point(37, 132);
+            this.userRegLabel.Location = new System.Drawing.Point(0, 132);
             this.userRegLabel.Name = "userRegLabel";
-            this.userRegLabel.Size = new System.Drawing.Size(58, 15);
+            this.userRegLabel.Size = new System.Drawing.Size(264, 15);
             this.userRegLabel.Style = MetroFramework.MetroColorStyle.Red;
             this.userRegLabel.TabIndex = 11;
             this.userRegLabel.Text = "error here";
+            this.userRegLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.userRegLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.userRegLabel.UseStyleColors = true;
             this.userRegLabel.Visible = false;
             // 
             // passLabel
             // 
-            this.passLabel.AutoSize = true;
             this.passLabel.FontSize = MetroFramework.MetroLabelSize.Small;
             this.passLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.passLabel.Location = new System.Drawing.Point(493, 232);
             this.passLabel.Name = "passLabel";
-            this.passLabel.Size = new System.Drawing.Size(58, 15);
+            this.passLabel.Size = new System.Drawing.Size(180, 15);
             this.passLabel.Style = MetroFramework.MetroColorStyle.Red;
             this.passLabel.TabIndex = 10;
             this.passLabel.Text = "error here";
+            this.passLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.passLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.passLabel.UseStyleColors = true;
             this.passLabel.Visible = false;
             // 
             // userLabel
             // 
-            this.userLabel.AutoSize = true;
             this.userLabel.FontSize = MetroFramework.MetroLabelSize.Small;
             this.userLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.userLabel.Location = new System.Drawing.Point(493, 167);
             this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(58, 15);
+            this.userLabel.Size = new System.Drawing.Size(180, 15);
             this.userLabel.Style = MetroFramework.MetroColorStyle.Red;
             this.userLabel.TabIndex = 9;
             this.userLabel.Text = "error here";
+            this.userLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.userLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.userLabel.UseStyleColors = true;
             this.userLabel.Visible = false;
@@ -240,7 +240,7 @@ namespace PassKey.Sliders
             this.passowrdTextBox.Location = new System.Drawing.Point(495, 250);
             this.passowrdTextBox.MaxLength = 32767;
             this.passowrdTextBox.Name = "passowrdTextBox";
-            this.passowrdTextBox.PasswordChar = '\0';
+            this.passowrdTextBox.PasswordChar = '●';
             this.passowrdTextBox.PromptText = "Password";
             this.passowrdTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.passowrdTextBox.SelectedText = "";
@@ -251,6 +251,7 @@ namespace PassKey.Sliders
             this.passowrdTextBox.TabIndex = 2;
             this.passowrdTextBox.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.passowrdTextBox.UseSelectable = true;
+            this.passowrdTextBox.UseSystemPasswordChar = true;
             this.passowrdTextBox.WaterMark = "Password";
             this.passowrdTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.passowrdTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -312,7 +313,7 @@ namespace PassKey.Sliders
             this.confirmPassRegTextBox.Location = new System.Drawing.Point(43, 280);
             this.confirmPassRegTextBox.MaxLength = 32767;
             this.confirmPassRegTextBox.Name = "confirmPassRegTextBox";
-            this.confirmPassRegTextBox.PasswordChar = '\0';
+            this.confirmPassRegTextBox.PasswordChar = '●';
             this.confirmPassRegTextBox.PromptText = "Confirm password";
             this.confirmPassRegTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.confirmPassRegTextBox.SelectedText = "";
@@ -323,6 +324,7 @@ namespace PassKey.Sliders
             this.confirmPassRegTextBox.TabIndex = 6;
             this.confirmPassRegTextBox.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.confirmPassRegTextBox.UseSelectable = true;
+            this.confirmPassRegTextBox.UseSystemPasswordChar = true;
             this.confirmPassRegTextBox.WaterMark = "Confirm password";
             this.confirmPassRegTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.confirmPassRegTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -348,7 +350,7 @@ namespace PassKey.Sliders
             this.passRegTextBox.Location = new System.Drawing.Point(43, 215);
             this.passRegTextBox.MaxLength = 32767;
             this.passRegTextBox.Name = "passRegTextBox";
-            this.passRegTextBox.PasswordChar = '\0';
+            this.passRegTextBox.PasswordChar = '●';
             this.passRegTextBox.PromptText = "Password";
             this.passRegTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.passRegTextBox.SelectedText = "";
@@ -359,6 +361,7 @@ namespace PassKey.Sliders
             this.passRegTextBox.TabIndex = 5;
             this.passRegTextBox.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.passRegTextBox.UseSelectable = true;
+            this.passRegTextBox.UseSystemPasswordChar = true;
             this.passRegTextBox.WaterMark = "Password";
             this.passRegTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.passRegTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

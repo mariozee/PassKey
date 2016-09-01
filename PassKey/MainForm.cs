@@ -42,5 +42,11 @@ namespace PassKey
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void infoLink_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.Show();
+        }
     }
 }

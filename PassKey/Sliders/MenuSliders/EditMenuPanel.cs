@@ -45,10 +45,10 @@ namespace PassKey.Sliders.MenuSliders
 
         private void doneButton_Click(object sender, EventArgs e)
         {
-            this.User.Data.RemoveAt(selectedRowIndex);
+            this.User.RemoveData(selectedRowIndex);
             UserDataInfo dataInfo = new UserDataInfo(this.hostNameTextBox.Text
                 , this.emailTextBox.Text, this.usernameTextBox.Text, this.passwordTextBox.Text);
-            this.User.Data.Insert(selectedRowIndex, dataInfo);
+            this.User.InsertData(selectedRowIndex, dataInfo);
 
             DataTranslator.Compose(this.User.Data, this.User.Username, this.User.Key);
 

@@ -55,7 +55,7 @@ namespace PassKey.Sliders
             try
             {
                 this.loginValidator.ValidateInput(this.userNameTextBox.Text, this.passowrdTextBox.Text);
-                this.LogUser();
+                this.LogUser(this.userNameTextBox.Text, this.passowrdTextBox.Text);
             }
             catch (InvalidUsernameException iue)
             {
@@ -78,7 +78,7 @@ namespace PassKey.Sliders
             {
                 this.regValidator.ValidateInput(this.userRegTextBox.Text, this.passRegTextBox.Text, this.confirmPassRegTextBox.Text);
                 this.regHandler.Register(this.userRegTextBox.Text, this.passRegTextBox.Text);
-                this.LogUser();
+                this.LogUser(this.userRegTextBox.Text, this.passRegTextBox.Text);
             }
             catch (UsernameAlreadyUsedException uaue)
             {
@@ -105,7 +105,14 @@ namespace PassKey.Sliders
                 this.passRegLabel.Text = iple.Message;
                 this.passRegLabel.Visible = true;
             }
+        }
 
+        private void LogUser(string username, string password)
+        {
+            this.user = loginHandler.Login(username, password);
+            this.userPanel = new UserPanel(this.MainForm, user);
+            this.Swipe(false);
+            this.userPanel.Swipe(true);
         }
 
         private void restoreLink_Click(object sender, EventArgs e)
@@ -113,15 +120,7 @@ namespace PassKey.Sliders
             this.Enabled = false;
             this.restorePanel = new RestorePanel(this.MainForm, this);
             restorePanel.Swipe(true);
-        }
-
-        private void LogUser()
-        {
-            this.user = loginHandler.Login(this.userNameTextBox.Text, this.passowrdTextBox.Text);
-            this.userPanel = new UserPanel(this.MainForm, user);
-            this.Swipe(false);
-            this.userPanel.Swipe(true);
-        }
+        }        
 
         private void restoreLink_MouseDown(object sender, MouseEventArgs e)
             => this.restoreLink.UseCustomForeColor = false;

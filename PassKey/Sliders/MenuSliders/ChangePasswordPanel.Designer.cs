@@ -72,7 +72,7 @@ namespace PassKey.Sliders.MenuSliders
             this.oldPasswordTextBox.Location = new System.Drawing.Point(36, 80);
             this.oldPasswordTextBox.MaxLength = 32767;
             this.oldPasswordTextBox.Name = "oldPasswordTextBox";
-            this.oldPasswordTextBox.PasswordChar = '\0';
+            this.oldPasswordTextBox.PasswordChar = '●';
             this.oldPasswordTextBox.PromptText = "Old password";
             this.oldPasswordTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.oldPasswordTextBox.SelectedText = "";
@@ -83,6 +83,7 @@ namespace PassKey.Sliders.MenuSliders
             this.oldPasswordTextBox.TabIndex = 2;
             this.oldPasswordTextBox.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.oldPasswordTextBox.UseSelectable = true;
+            this.oldPasswordTextBox.UseSystemPasswordChar = true;
             this.oldPasswordTextBox.WaterMark = "Old password";
             this.oldPasswordTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.oldPasswordTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -105,7 +106,7 @@ namespace PassKey.Sliders.MenuSliders
             this.newPassTextBox.Location = new System.Drawing.Point(36, 140);
             this.newPassTextBox.MaxLength = 32767;
             this.newPassTextBox.Name = "newPassTextBox";
-            this.newPassTextBox.PasswordChar = '\0';
+            this.newPassTextBox.PasswordChar = '●';
             this.newPassTextBox.PromptText = "New password";
             this.newPassTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.newPassTextBox.SelectedText = "";
@@ -116,6 +117,7 @@ namespace PassKey.Sliders.MenuSliders
             this.newPassTextBox.TabIndex = 3;
             this.newPassTextBox.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.newPassTextBox.UseSelectable = true;
+            this.newPassTextBox.UseSystemPasswordChar = true;
             this.newPassTextBox.WaterMark = "New password";
             this.newPassTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.newPassTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -138,7 +140,7 @@ namespace PassKey.Sliders.MenuSliders
             this.confirmNewPassTextBox.Location = new System.Drawing.Point(36, 200);
             this.confirmNewPassTextBox.MaxLength = 32767;
             this.confirmNewPassTextBox.Name = "confirmNewPassTextBox";
-            this.confirmNewPassTextBox.PasswordChar = '\0';
+            this.confirmNewPassTextBox.PasswordChar = '●';
             this.confirmNewPassTextBox.PromptText = "Confirm new password";
             this.confirmNewPassTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.confirmNewPassTextBox.SelectedText = "";
@@ -149,36 +151,37 @@ namespace PassKey.Sliders.MenuSliders
             this.confirmNewPassTextBox.TabIndex = 4;
             this.confirmNewPassTextBox.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.confirmNewPassTextBox.UseSelectable = true;
+            this.confirmNewPassTextBox.UseSystemPasswordChar = true;
             this.confirmNewPassTextBox.WaterMark = "Confirm new password";
             this.confirmNewPassTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.confirmNewPassTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // oldPassLabel
             // 
-            this.oldPassLabel.AutoSize = true;
             this.oldPassLabel.FontSize = MetroFramework.MetroLabelSize.Small;
             this.oldPassLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.oldPassLabel.Location = new System.Drawing.Point(36, 62);
+            this.oldPassLabel.Location = new System.Drawing.Point(0, 62);
             this.oldPassLabel.Name = "oldPassLabel";
-            this.oldPassLabel.Size = new System.Drawing.Size(58, 15);
+            this.oldPassLabel.Size = new System.Drawing.Size(237, 15);
             this.oldPassLabel.Style = MetroFramework.MetroColorStyle.Red;
             this.oldPassLabel.TabIndex = 5;
             this.oldPassLabel.Text = "error here";
+            this.oldPassLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.oldPassLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.oldPassLabel.UseStyleColors = true;
             this.oldPassLabel.Visible = false;
             // 
             // newPassLabel
             // 
-            this.newPassLabel.AutoSize = true;
             this.newPassLabel.FontSize = MetroFramework.MetroLabelSize.Small;
             this.newPassLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.newPassLabel.Location = new System.Drawing.Point(36, 122);
+            this.newPassLabel.Location = new System.Drawing.Point(0, 122);
             this.newPassLabel.Name = "newPassLabel";
-            this.newPassLabel.Size = new System.Drawing.Size(58, 15);
+            this.newPassLabel.Size = new System.Drawing.Size(237, 15);
             this.newPassLabel.Style = MetroFramework.MetroColorStyle.Red;
             this.newPassLabel.TabIndex = 7;
             this.newPassLabel.Text = "erorr here";
+            this.newPassLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.newPassLabel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.newPassLabel.UseStyleColors = true;
             this.newPassLabel.Visible = false;
@@ -224,7 +227,6 @@ namespace PassKey.Sliders.MenuSliders
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

@@ -42,7 +42,7 @@ namespace PassKey.Sliders.MenuSliders
             if (!string.IsNullOrWhiteSpace(this.backupTextBox.Text))
             {
                 string[] data = RegistryData.GetDataForBackup(this.User.Username);
-                string path = this.backupTextBox.Text + "\\" + "backup.dat";
+                string path = this.backupTextBox.Text + "\\" + $"{this.User.Username}_backup.dat";
                 File.WriteAllLines(path, data);
                 MetroMessageBox.Show(this
                     , string.Empty

@@ -163,7 +163,7 @@ namespace PassKey.Sliders.MenuSliders
             this.passwordTextBox.Location = new System.Drawing.Point(36, 260);
             this.passwordTextBox.MaxLength = 32767;
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.PasswordChar = '\0';
+            this.passwordTextBox.PasswordChar = '●';
             this.passwordTextBox.PromptText = "Password";
             this.passwordTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.passwordTextBox.SelectedText = "";
@@ -174,6 +174,7 @@ namespace PassKey.Sliders.MenuSliders
             this.passwordTextBox.TabIndex = 3;
             this.passwordTextBox.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.passwordTextBox.UseSelectable = true;
+            this.passwordTextBox.UseSystemPasswordChar = true;
             this.passwordTextBox.WaterMark = "Password";
             this.passwordTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.passwordTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);

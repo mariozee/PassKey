@@ -27,7 +27,7 @@ namespace PassKey.Sliders.MenuSliders
             UserDataInfo dataInfo = new UserDataInfo(this.hostTextBox.Text
                 , this.emailTextBox.Text, this.usernameTextBox.Text, this.passwordTextBox.Text);
 
-            this.User.Data.Add(dataInfo);
+            this.User.AddData(dataInfo);
             DataTranslator.Compose(this.User.Data, this.User.Username, this.User.Key);
 
             this.hostTextBox.Clear();

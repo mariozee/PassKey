@@ -8,7 +8,7 @@ namespace PassKey
 {
     public class GlobalMessages
     {
-        public const string InvalidUsernameLenght = "must be between {0} and {1} characters";
+        public const string InvalidUsernameLenght = "username must be between {0} and {1} characters";
         public const string InvalidUsername = "invalid username";
         public const string AlreadyTaken = "username already taken";
         public const string PasswordsMismatch = "passwords not match";

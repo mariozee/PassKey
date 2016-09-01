@@ -19,3 +19,5 @@ D:\Programing\PassKey\PassKey\obj\Debug\PassKey.csproj.GenerateResource.Cache
 D:\Programing\PassKey\PassKey\obj\Debug\PassKey.exe
 D:\Programing\PassKey\PassKey\obj\Debug\PassKey.pdb
 D:\Programing\PassKey\PassKey\obj\Debug\PassKey.Sliders.MenuSliders.PasswordPanel.resources
+D:\Programing\PassKey\PassKey\obj\Debug\PassKey.AboutForm.resources
+D:\Programing\PassKey\PassKey\obj\Debug\PassKey.csprojResolveAssemblyReference.cache

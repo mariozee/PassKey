@@ -117,5 +117,19 @@ namespace PassKey.Sliders
             AddMenuPanel addPanel = new AddMenuPanel(this.MainForm, this.user);
             addPanel.Swipe(true);
         }
-    }
+
+        private void azSort_Click(object sender, EventArgs e)
+        {
+            this.user.SortData(-1);
+            this.dataGrid.Refresh();
+            DataTranslator.Compose(this.user.Data, this.user.Username, this.user.Key);
+        }
+
+        private void zaSort_Click(object sender, EventArgs e)
+        {
+            this.user.SortData(1);
+            this.dataGrid.Refresh();
+            DataTranslator.Compose(this.user.Data, this.user.Username, this.user.Key);
+        }
+    }    
 }

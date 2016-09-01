@@ -17,8 +17,8 @@ namespace PassKey
         public const string UsersLoginInfoSubKey = "LoginData";
         public const string UsersDataSubKey = "UsersData";
 
-        //vector initializer value
-        public const string IV = "k1$m4wH1T3a$n!g@";
+        //vector initializer value 16
+        public const string IV = "vl#*eA^S!_vzTAm^";
 
         //registration validation
         public const int MinUsernameLenght = 4;
@@ -36,9 +36,14 @@ namespace PassKey
         public const char HostsSplitChar = '&';
         public const char InfoSplitChar = '/';
 
-        //backup encrypt/decrypt
-        public const string BackupString = "PassKeyMarioZisovSoftware2016CM3";
+        //backup encrypt/decrypt 32  
+        public static string BackupString = "V0kG(0Od18-wMzcl55oltL9Uz+CNMU5t";
         public static byte[] backUpKey = ASCIIEncoding.ASCII.GetBytes(BackupString);
-        public const string BackupMark = "PassKeyBackupValidatingMark";
+
+        public const string BackupMark = "8Zv*pIwm(GEriDF>Ac-(w?GsPZ6i^tK>";
+
+        //info
+        public const string MyEmail = "mario.zisov@gmail.com";
+        public const string GitHubPage = "https://github.com/zisov4eto/PassKey";
     }
 }
