@@ -1,23 +1,28 @@
-﻿using PassKey.Sliders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace PassKey
+﻿namespace PassKey
 {
+    using System;
+    using System.Threading;
+    using System.Windows.Forms;
+
     static class Startup
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+        private static Mutex mutex = new Mutex(true, "mutex");
+
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+
+            if (mutex.WaitOne(TimeSpan.Zero, true))
+            {
+                Application.Run(new MainForm());
+            }
+            else
+            {
+                MessageBox.Show("The program already running!", "Oops",
+                    MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }            
         }
     }
 }

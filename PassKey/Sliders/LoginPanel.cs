@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using PassKey.UsersInputValidators;
-using PassKey.ActionHandlers;
-using PassKey.Exceptions;
-using PassKey.UserInfo;
-using MetroFramework.Controls;
-
-namespace PassKey.Sliders
+﻿namespace PassKey.Sliders
 {
+    using System;
+    using System.Windows.Forms;
+    using UsersInputValidators;
+    using ActionHandlers;
+    using Exceptions;
+    using UserInfo;
+
     public partial class LoginPanel : BaseSliderPanel
     {
         private const int OpenXConst = 0;

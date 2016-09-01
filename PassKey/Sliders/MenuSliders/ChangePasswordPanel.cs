@@ -1,21 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using PassKey.UserInfo;
-using PassKey.Data;
-using PassKey.SecurityUtilities;
-using PassKey.Exceptions;
-using MetroFramework;
-using MetroFramework.Controls;
-
-namespace PassKey.Sliders.MenuSliders
+﻿namespace PassKey.Sliders.MenuSliders
 {
+    using System;
+    using System.Windows.Forms;
+    using UserInfo;
+    using Data;
+    using SecurityUtilities;
+    using Exceptions;
+    using MetroFramework;
+
     public partial class ChangePasswordPanel : BaseMenuSliderPanel
     {
         public ChangePasswordPanel(Form form, LoggedUser user)
@@ -47,7 +39,7 @@ namespace PassKey.Sliders.MenuSliders
                     RegistryData.SetUserData(this.User.Username, newData);
                     this.User.Key = newKey;
 
-                    MetroMessageBox.Show(this.MainForm, "", "Password changed successfully!"
+                    MetroMessageBox.Show(this.MainForm, string.Empty, GlobalMessages.PasswordChanged
                         , MessageBoxButtons.OK, MessageBoxIcon.Information, 80);
 
                     this.Swipe(false);
@@ -65,7 +57,7 @@ namespace PassKey.Sliders.MenuSliders
             }
             else
             {
-                this.oldPassLabel.Text = "invalid password";
+                this.oldPassLabel.Text = GlobalMessages.InvalidPassword;
                 this.oldPassLabel.Visible = true;
             }
         }

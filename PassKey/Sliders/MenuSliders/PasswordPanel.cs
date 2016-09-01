@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using MetroFramework.Controls;
-using PassKey.UserInfo;
-
-namespace PassKey.Sliders.MenuSliders
+﻿namespace PassKey.Sliders.MenuSliders
 {
+    using System;
+    using System.Windows.Forms;
+    using MetroFramework.Controls;
+
     public partial class PasswordPanel : BaseSliderPanel
     {
         private const int OpenXConst = 200;

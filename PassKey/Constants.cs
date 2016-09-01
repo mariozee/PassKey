@@ -1,23 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PassKey
+﻿namespace PassKey
 {
+    using System.Text;
+
     public static class Constants
     {
         //sub keys names
         public const string UsersDataSubKeyPath = "passkey\\usersdata";
         public const string UsersLoginSubKeyPath = "passkey\\logindata";
 
-        public const string GeneralSubKey = "Software";
-        public const string PassKeySubKeyName = "PassKey";
-        public const string UsersLoginInfoSubKey = "LoginData";
-        public const string UsersDataSubKey = "UsersData";
-
-        //vector initializer value 16
+        //vector initializer value 16byte
         public const string IV = "vl#*eA^S!_vzTAm^";
 
         //registration validation
@@ -28,15 +19,11 @@ namespace PassKey
         public const string UsernameValidationPattern = "^[a-zA-Z0-9]+$";
         public const string PasswordValidationPattern = "[0-9]+";
 
-        //register form
-        public const string BaseUsernameExceptionKeyWord = "username";
-        public const string BasePasswordExceptionKeyWord = "password";
-
         //DataParser
         public const char HostsSplitChar = '&';
         public const char InfoSplitChar = '/';
 
-        //backup encrypt/decrypt 32  
+        //backup encrypt/decrypt 32byte  
         public static string BackupString = "V0kG(0Od18-wMzcl55oltL9Uz+CNMU5t";
         public static byte[] backUpKey = ASCIIEncoding.ASCII.GetBytes(BackupString);
 
@@ -45,5 +32,11 @@ namespace PassKey
         //info
         public const string MyEmail = "mario.zisov@gmail.com";
         public const string GitHubPage = "https://github.com/zisov4eto/PassKey";
+
+        //backup file name
+        public static string BackupFileName = "{0}_backup.dat";
+
+        //restore panel
+        public const string FolderDialogFilter = "All Files(*.dat) | *.dat";
     }
 }

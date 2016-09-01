@@ -1,14 +1,9 @@
-﻿using PassKey.Data;
-using PassKey.SecurityUtilities;
-using PassKey.UserInfo;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PassKey.ActionHandlers
+﻿namespace PassKey.ActionHandlers
 {
+    using PassKey.Data;
+    using PassKey.SecurityUtilities;
+    using PassKey.UserInfo;
+
     public class LoginHandler
     {
         private LoggedUser user;

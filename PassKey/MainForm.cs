@@ -1,31 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using MetroFramework.Forms;
-using PassKey.Sliders;
-using System.Threading;
-
-namespace PassKey
+﻿namespace PassKey
 {
+    using System;
+    using System.Windows.Forms;
+    using MetroFramework.Forms;
+    using Sliders;
+
     public partial class MainForm : MetroForm
     {
         private LoginPanel loginPanel;
 
         public MainForm()
         {
-           InitializeComponent();
+            InitializeComponent();
             loginPanel = new LoginPanel(this);
         }
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            this.loginPanel.Swipe(true);          
+            this.loginPanel.Swipe(true);
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)

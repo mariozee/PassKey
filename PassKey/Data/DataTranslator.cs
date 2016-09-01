@@ -1,14 +1,11 @@
-﻿using PassKey.SecurityUtilities;
-using PassKey.UserInfo;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace PassKey.Data
+﻿namespace PassKey.Data
 {
+    using System;
+    using System.Text;
+    using System.Windows.Forms;
+    using SecurityUtilities;
+    using UserInfo;
+
     public static class DataTranslator
     {
         public static BindingSource Parse(string username, byte[] key)

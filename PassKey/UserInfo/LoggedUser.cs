@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace PassKey.UserInfo
+﻿namespace PassKey.UserInfo
 {
+    using System.Windows.Forms;
+
     public class LoggedUser
     {
         public LoggedUser(string username, byte[] key, BindingSource data)

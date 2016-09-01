@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using PassKey.UserInfo;
-using PassKey.Sliders.MenuSliders;
-using MetroFramework;
-using PassKey.Data;
-using MetroFramework.Controls;
-
-namespace PassKey.Sliders
+﻿namespace PassKey.Sliders
 {
+    using System;
+    using System.Windows.Forms;
+    using UserInfo;
+    using MenuSliders;
+    using Data;
+    using MetroFramework;
+
     public partial class UserPanel : BaseSliderPanel
     {
         private const int OpenXConst = 0;
@@ -49,7 +41,7 @@ namespace PassKey.Sliders
         {
             AccountDeletePanel deletePanel = new AccountDeletePanel(this.MainForm, this.user, this);
             DialogResult result = MetroMessageBox.Show(this.MainForm, string.Empty
-                , "Your account will be deleted permanently. Do you want to continue?"
+                , GlobalMessages.AccountDeleteApprove
                 , MessageBoxButtons.YesNo, MessageBoxIcon.Warning, 100);
 
             if (result == DialogResult.Yes)
@@ -93,7 +85,7 @@ namespace PassKey.Sliders
             DialogResult result = MetroMessageBox.Show(
                 this
                 , string.Empty
-                , "Are you sure you want to delete selected host?"
+                , GlobalMessages.DeleteHost
                 , MessageBoxButtons.YesNo
                 , MessageBoxIcon.Question
                 , 80);

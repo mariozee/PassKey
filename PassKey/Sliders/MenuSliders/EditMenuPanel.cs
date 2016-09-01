@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using PassKey.UserInfo;
-using MetroFramework.Controls;
-using PassKey.Data;
-
-namespace PassKey.Sliders.MenuSliders
+﻿namespace PassKey.Sliders.MenuSliders
 {
+    using System;
+    using System.Windows.Forms;
+    using UserInfo;
+    using MetroFramework.Controls;
+    using Data;
+
     public partial class EditMenuPanel : BaseMenuSliderPanel
     {
         private int selectedRowIndex;

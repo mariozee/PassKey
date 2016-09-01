@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using PassKey.UserInfo;
-using PassKey.SecurityUtilities;
-using PassKey.Data;
-using MetroFramework;
-using MetroFramework.Controls;
-
-namespace PassKey.Sliders.MenuSliders
+﻿namespace PassKey.Sliders.MenuSliders
 {
+    using System;
+    using System.Windows.Forms;
+    using UserInfo;
+    using SecurityUtilities;
+    using Data;
+    using MetroFramework;
+
     public partial class AccountDeletePanel : BaseMenuSliderPanel
     {
         private UserPanel userPanel;
@@ -36,7 +28,7 @@ namespace PassKey.Sliders.MenuSliders
                 if (hashedPass == RegistryData.GetUserPassword(this.User.Username))
                 {
                     RegistryData.DeleteAccout(this.User.Username);
-                    MetroMessageBox.Show(this.MainForm, string.Empty, "Account was deleted!"
+                    MetroMessageBox.Show(this.MainForm, string.Empty, GlobalMessages.AccountDeleted
                         , MessageBoxButtons.OK, MessageBoxIcon.Information, 80);
                     this.Swipe(false);
                     this.userPanel.Logout();

@@ -1,15 +1,9 @@
-﻿using Microsoft.Win32;
-using PassKey.SecurityUtilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.AccessControl;
-using System.Security.Permissions;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PassKey.Data
+﻿namespace PassKey.Data
 {
+    using System.Text;
+    using Microsoft.Win32;
+    using SecurityUtilities;
+
     public static class RegistryData
     {
         private static RegistryKey registry = Registry.CurrentUser;

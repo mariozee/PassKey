@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using PassKey.UserInfo;
-using PassKey.Data;
-using System.IO;
-using MetroFramework;
-using MetroFramework.Controls;
-
-namespace PassKey.Sliders.MenuSliders
+﻿namespace PassKey.Sliders.MenuSliders
 {
+    using System;
+    using System.Windows.Forms;
+    using System.IO;
+    using MetroFramework;
+    using UserInfo;
+    using Data;
+
     public partial class BackupMenuPanel : BaseMenuSliderPanel
     {
         public BackupMenuPanel(Form form, LoggedUser user)
@@ -42,11 +34,13 @@ namespace PassKey.Sliders.MenuSliders
             if (!string.IsNullOrWhiteSpace(this.backupTextBox.Text))
             {
                 string[] data = RegistryData.GetDataForBackup(this.User.Username);
-                string path = this.backupTextBox.Text + "\\" + $"{this.User.Username}_backup.dat";
+                string path = this.backupTextBox.Text + "\\" + 
+                    string.Format(Constants.BackupFileName, this.User.Username);
+
                 File.WriteAllLines(path, data);
                 MetroMessageBox.Show(this
                     , string.Empty
-                    , "Backup complete!"
+                    , GlobalMessages.BackupComplete
                     , MessageBoxButtons.OK
                     , MessageBoxIcon.Information
                     , 80);

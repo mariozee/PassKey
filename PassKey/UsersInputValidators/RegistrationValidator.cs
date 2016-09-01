@@ -1,14 +1,10 @@
-﻿using PassKey.Data;
-using PassKey.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿namespace PassKey.UsersInputValidators
+{    
+    using System.Linq;
+    using System.Text.RegularExpressions;
+    using Data;
+    using Exceptions;
 
-namespace PassKey.UsersInputValidators
-{
     public class RegistrationValidator
     {
         public void ValidateInput(string username, string password, string confirmedPassword)

@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.IO;
-using PassKey.SecurityUtilities;
-using MetroFramework;
-using PassKey.Data;
-using MetroFramework.Controls;
-
-namespace PassKey.Sliders
+﻿namespace PassKey.Sliders
 {
+    using System;
+    using System.Windows.Forms;
+    using System.IO;
+    using MetroFramework;
+    using SecurityUtilities;
+    using Data;
+
     public partial class RestorePanel : BaseSliderPanel
     {
         private const int OpenXConst = 435;
@@ -40,7 +32,7 @@ namespace PassKey.Sliders
 
         private void RestoreTextBox_ButtonClick(object sender, EventArgs e)
         {
-            this.openFileDialog.Filter = "All Files(*.dat) | *.dat";
+            this.openFileDialog.Filter = Constants.FolderDialogFilter;
             this.openFileDialog.ShowDialog();
             this.restoreTextBox.Text = this.openFileDialog.FileName;
         }
@@ -55,7 +47,7 @@ namespace PassKey.Sliders
                 {
                     RegistryData.SetRestoredData(enryptedData);
 
-                    MetroMessageBox.Show(this.MainForm, string.Empty, "Restore completed!"
+                    MetroMessageBox.Show(this.MainForm, string.Empty, GlobalMessages.RestoreCoplete
                         , MessageBoxButtons.OK, MessageBoxIcon.Information, 80);
 
                     this.loginPanel.Enabled = true;
@@ -64,7 +56,7 @@ namespace PassKey.Sliders
                 }
                 else
                 {
-                    MetroMessageBox.Show(this.MainForm, string.Empty, "Wrong or corrupted data file!"
+                    MetroMessageBox.Show(this.MainForm, string.Empty, GlobalMessages.WrongDataFile
                         , MessageBoxButtons.OK, MessageBoxIcon.Error, 80);
                 }               
             }

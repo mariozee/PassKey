@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PassKey.Exceptions
+﻿namespace PassKey.Exceptions
 {
+    using System;
+
     public class PassKeyException : Exception
     {
         public PassKeyException(string message)

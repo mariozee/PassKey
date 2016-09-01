@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PassKey.SecurityUtilities
+﻿namespace PassKey.SecurityUtilities
 {
+    using System;
+    using System.Security.Cryptography;
+    using System.Text;
+
     public static class CryptographicUtilities
     {
         public static string Encrypt(string text, byte[] key)
