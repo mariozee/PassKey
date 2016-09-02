@@ -41,11 +41,11 @@
         {
             if (!string.IsNullOrWhiteSpace(this.restoreTextBox.Text))
             {
-                string[] enryptedData = File.ReadAllLines(this.restoreTextBox.Text);
-                string backupMark = CryptographicUtilities.Decrypt(enryptedData[0], Constants.backUpKey);
-                if (backupMark == Constants.BackupMark)
+                string[] encryptedData = File.ReadAllLines(this.restoreTextBox.Text);
+                string backupMark = encryptedData[0];
+                if (backupMark == Constants.ExpectedMark)
                 {
-                    RegistryData.SetRestoredData(enryptedData);
+                    RegistryData.SetRestoredData(encryptedData);
 
                     MetroMessageBox.Show(this.MainForm, string.Empty, GlobalMessages.RestoreCoplete
                         , MessageBoxButtons.OK, MessageBoxIcon.Information, 80);

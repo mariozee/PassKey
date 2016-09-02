@@ -24,11 +24,6 @@
             this.backupTextBox.Text = this.browseDialog.SelectedPath;
         }
 
-        private void RestoreTextBox_ButtonClick(object sender, EventArgs e)
-        {
-            this.browseDialog.ShowDialog();
-        }
-
         private void backupButton_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(this.backupTextBox.Text))

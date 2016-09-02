@@ -13,11 +13,9 @@
 
         public string Username { get; private set; }
 
-        public byte[] Key { get; set; }
+        public byte[] Key { get; private set; }
 
-        public BindingSource Data { get; set; }
-
-        public BindingSource Adat { get; set; }
+        public BindingSource Data { get; private set; }
 
         public void AddData(UserDataInfo dataInfo)
         {
@@ -32,6 +30,11 @@
         public void InsertData(int index, UserDataInfo dataInfo)
         {
             this.Data.Insert(index, dataInfo);
+        }
+
+        public void SetNewKey(byte[] key)
+        {
+            this.Key = key;
         }
 
         public void SortData(int direction)

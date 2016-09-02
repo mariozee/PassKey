@@ -49,6 +49,7 @@ namespace PassKey.Sliders
             this.confirmPassRegTextBox = new MetroFramework.Controls.MetroTextBox();
             this.passRegTextBox = new MetroFramework.Controls.MetroTextBox();
             this.userRegTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.loginScreenToolTip = new MetroFramework.Components.MetroToolTip();
             this.SuspendLayout();
             // 
             // passRegLabel
@@ -121,6 +122,7 @@ namespace PassKey.Sliders
             this.restoreLink.TabIndex = 8;
             this.restoreLink.Text = "Restore account";
             this.restoreLink.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.loginScreenToolTip.SetToolTip(this.restoreLink, "Restore your account backup from here.");
             this.restoreLink.UseCustomBackColor = true;
             this.restoreLink.UseSelectable = true;
             this.restoreLink.Click += new System.EventHandler(this.restoreLink_Click);
@@ -402,6 +404,15 @@ namespace PassKey.Sliders
             this.userRegTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.userRegTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // loginScreenToolTip
+            // 
+            this.loginScreenToolTip.AutoPopDelay = 10000;
+            this.loginScreenToolTip.InitialDelay = 500;
+            this.loginScreenToolTip.ReshowDelay = 100;
+            this.loginScreenToolTip.Style = MetroFramework.MetroColorStyle.Default;
+            this.loginScreenToolTip.StyleManager = null;
+            this.loginScreenToolTip.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
             // LoginPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,5 +462,6 @@ namespace PassKey.Sliders
         private MetroFramework.Controls.MetroLabel passRegLabel;
         private MetroFramework.Controls.MetroLink metroLink1;
         private MetroFramework.Controls.MetroLink metroLink2;
+        private MetroFramework.Components.MetroToolTip loginScreenToolTip;
     }
 }

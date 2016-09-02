@@ -34,6 +34,7 @@
             this.infoLink = new MetroFramework.Controls.MetroLink();
             this.closeLink = new MetroFramework.Controls.MetroLink();
             this.minimizeLink = new MetroFramework.Controls.MetroLink();
+            this.mainToolTip = new MetroFramework.Components.MetroToolTip();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +69,7 @@
             this.infoLink.NoFocusImage = global::PassKey.Properties.Resources.infoDis;
             this.infoLink.Size = new System.Drawing.Size(39, 39);
             this.infoLink.TabIndex = 2;
+            this.mainToolTip.SetToolTip(this.infoLink, "Software info.");
             this.infoLink.UseCustomBackColor = true;
             this.infoLink.UseSelectable = true;
             this.infoLink.Click += new System.EventHandler(this.infoLink_Click);
@@ -101,6 +103,12 @@
             this.minimizeLink.UseCustomBackColor = true;
             this.minimizeLink.UseSelectable = true;
             this.minimizeLink.Click += new System.EventHandler(this.minimizeLink_Click);
+            // 
+            // mainToolTip
+            // 
+            this.mainToolTip.Style = MetroFramework.MetroColorStyle.Blue;
+            this.mainToolTip.StyleManager = null;
+            this.mainToolTip.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // MainForm
             // 
@@ -139,6 +147,7 @@
         private MetroFramework.Controls.MetroLink infoLink;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Components.MetroToolTip mainToolTip;
     }
 }
 

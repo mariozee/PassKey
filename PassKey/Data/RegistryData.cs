@@ -1,6 +1,5 @@
 ﻿namespace PassKey.Data
 {
-    using System.Text;
     using Microsoft.Win32;
     using SecurityUtilities;
 
@@ -68,11 +67,9 @@
             dataForBackup[2] = logInfo;
             dataForBackup[3] = userData;
 
-            byte[] key = ASCIIEncoding.ASCII.GetBytes(Constants.BackupString);
-
             for (int i = 0; i < dataForBackup.Length; i++)
             {
-                dataForBackup[i] = CryptographicUtilities.Encrypt(dataForBackup[i], key);
+                dataForBackup[i] = CryptographicUtilities.Encrypt(dataForBackup[i], Constants.backUpKey);
             }
 
             return dataForBackup;

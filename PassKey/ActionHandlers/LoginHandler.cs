@@ -8,10 +8,6 @@
     {
         private LoggedUser user;
 
-        public LoginHandler()
-        {
-        }
-
         public LoggedUser Login(string username, string password)
         {
             byte[] key = HashUtilities.HashKey(password);                      

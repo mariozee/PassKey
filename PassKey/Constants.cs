@@ -24,17 +24,18 @@
         public const char InfoSplitChar = '/';
 
         //backup encrypt/decrypt 32byte  
-        public static string BackupString = "V0kG(0Od18-wMzcl55oltL9Uz+CNMU5t";
+        public const string BackupString = "V0kG(0Od18-wMzcl55oltL9Uz+CNMU5t";
         public static byte[] backUpKey = ASCIIEncoding.ASCII.GetBytes(BackupString);
 
         public const string BackupMark = "8Zv*pIwm(GEriDF>Ac-(w?GsPZ6i^tK>";
+        public const string ExpectedMark = "f7wDccjXkOotrMW55jGqJWP5tOxKvxamhJXLaxLH+g0TI/9of635s7f/YmedwzUI";
 
         //info
         public const string MyEmail = "mario.zisov@gmail.com";
         public const string GitHubPage = "https://github.com/zisov4eto/PassKey";
 
         //backup file name
-        public static string BackupFileName = "{0}_backup.dat";
+        public const string BackupFileName = "{0}_backup.dat";
 
         //restore panel
         public const string FolderDialogFilter = "All Files(*.dat) | *.dat";

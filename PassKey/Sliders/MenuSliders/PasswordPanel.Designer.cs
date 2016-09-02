@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.passwordLabel = new MetroFramework.Controls.MetroLabel();
             this.passwordShowTimer = new System.Windows.Forms.Timer(this.components);
+            this.passwordToolTip = new MetroFramework.Components.MetroToolTip();
             this.SuspendLayout();
             // 
             // passwordLabel
@@ -43,6 +44,7 @@
             this.passwordLabel.TabIndex = 0;
             this.passwordLabel.Text = "password";
             this.passwordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.passwordToolTip.SetToolTip(this.passwordLabel, "Click to hide.");
             this.passwordLabel.UseCustomBackColor = true;
             this.passwordLabel.Click += new System.EventHandler(this.passwordLabel_Click);
             // 
@@ -50,6 +52,12 @@
             // 
             this.passwordShowTimer.Interval = 2500;
             this.passwordShowTimer.Tick += new System.EventHandler(this.passwordShowTimer_Tick);
+            // 
+            // passwordToolTip
+            // 
+            this.passwordToolTip.Style = MetroFramework.MetroColorStyle.Blue;
+            this.passwordToolTip.StyleManager = null;
+            this.passwordToolTip.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // PasswordPanel
             // 
@@ -68,5 +76,6 @@
 
         private MetroFramework.Controls.MetroLabel passwordLabel;
         private System.Windows.Forms.Timer passwordShowTimer;
+        private MetroFramework.Components.MetroToolTip passwordToolTip;
     }
 }

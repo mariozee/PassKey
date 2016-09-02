@@ -22,7 +22,7 @@
 
         private void GetItemToEdit(MetroGrid dataGrid)
         {
-            selectedRowIndex = dataGrid.CurrentCell.RowIndex;
+            this.selectedRowIndex = dataGrid.CurrentCell.RowIndex;
             string hostName = dataGrid.Rows[selectedRowIndex].Cells[0].Value.ToString();
             string email = dataGrid.Rows[selectedRowIndex].Cells[1].Value.ToString();
             string username = dataGrid.Rows[selectedRowIndex].Cells[2].Value.ToString();

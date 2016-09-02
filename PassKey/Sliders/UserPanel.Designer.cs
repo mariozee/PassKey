@@ -102,7 +102,7 @@ namespace PassKey.Sliders
             this.dataGrid.EnableHeadersVisualStyles = false;
             this.dataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.dataGrid.Location = new System.Drawing.Point(22, 34);
+            this.dataGrid.Location = new System.Drawing.Point(22, 29);
             this.dataGrid.MultiSelect = false;
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.ReadOnly = true;
@@ -119,7 +119,7 @@ namespace PassKey.Sliders
             this.dataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid.Size = new System.Drawing.Size(607, 431);
+            this.dataGrid.Size = new System.Drawing.Size(607, 451);
             this.dataGrid.TabIndex = 3;
             this.dataGrid.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.dataGrid.UseCustomBackColor = true;

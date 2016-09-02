@@ -42,7 +42,7 @@
             AccountDeletePanel deletePanel = new AccountDeletePanel(this.MainForm, this.user, this);
             DialogResult result = MetroMessageBox.Show(this.MainForm, string.Empty
                 , GlobalMessages.AccountDeleteApprove
-                , MessageBoxButtons.YesNo, MessageBoxIcon.Warning, 100);
+                , MessageBoxButtons.YesNo, MessageBoxIcon.Hand, 100);
 
             if (result == DialogResult.Yes)
             {
@@ -82,13 +82,8 @@
 
         private void removeLink_Click(object sender, EventArgs e)
         {
-            DialogResult result = MetroMessageBox.Show(
-                this
-                , string.Empty
-                , GlobalMessages.DeleteHost
-                , MessageBoxButtons.YesNo
-                , MessageBoxIcon.Question
-                , 80);
+            DialogResult result = MetroMessageBox.Show(this, string.Empty, GlobalMessages.DeleteHost
+                , MessageBoxButtons.YesNo, MessageBoxIcon.Information, 80);
 
             if (result == DialogResult.Yes)
             {

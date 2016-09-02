@@ -37,7 +37,7 @@
                     string newData = CryptographicUtilities.Encrypt(oldDecryptedData, newKey);
                     RegistryData.SetNewPassword(this.User.Username, newPassword);
                     RegistryData.SetUserData(this.User.Username, newData);
-                    this.User.Key = newKey;
+                    this.User.SetNewKey(newKey);
 
                     MetroMessageBox.Show(this.MainForm, string.Empty, GlobalMessages.PasswordChanged
                         , MessageBoxButtons.OK, MessageBoxIcon.Information, 80);
@@ -75,7 +75,6 @@
                 throw new InvalidPasswordLenghtException(string.Format(GlobalMessages.InvalidPasswordLenght
                     , Constants.MinPasswordLenght
                     , Constants.MaxPasswordLenght));
-
             }
         }
 

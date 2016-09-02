@@ -127,4 +127,7 @@ you can easily transfer it to other computers.
 
 Feel free to report any bug you find.</value>
   </data>
+  <metadata name="aboutToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

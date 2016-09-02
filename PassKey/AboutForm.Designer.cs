@@ -36,6 +36,7 @@
             this.gmailLink = new MetroFramework.Controls.MetroLink();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.closeLink = new MetroFramework.Controls.MetroLink();
+            this.aboutToolTip = new MetroFramework.Components.MetroToolTip();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -84,11 +85,12 @@
             this.githubLink.BackColor = System.Drawing.Color.Transparent;
             this.githubLink.Image = global::PassKey.Properties.Resources.githubFocus;
             this.githubLink.ImageSize = 55;
-            this.githubLink.Location = new System.Drawing.Point(43, 260);
+            this.githubLink.Location = new System.Drawing.Point(43, 415);
             this.githubLink.Name = "githubLink";
             this.githubLink.NoFocusImage = global::PassKey.Properties.Resources.githubNoFocus;
             this.githubLink.Size = new System.Drawing.Size(77, 78);
             this.githubLink.TabIndex = 10;
+            this.aboutToolTip.SetToolTip(this.githubLink, "Click to open GitHub page.");
             this.githubLink.UseCustomBackColor = true;
             this.githubLink.UseSelectable = true;
             this.githubLink.Click += new System.EventHandler(this.githubLink_Click);
@@ -98,12 +100,13 @@
             this.gmailLink.BackColor = System.Drawing.Color.Transparent;
             this.gmailLink.Image = global::PassKey.Properties.Resources.gmailFocus;
             this.gmailLink.ImageSize = 40;
-            this.gmailLink.Location = new System.Drawing.Point(43, 190);
+            this.gmailLink.Location = new System.Drawing.Point(45, 345);
             this.gmailLink.Name = "gmailLink";
             this.gmailLink.NoFocusImage = global::PassKey.Properties.Resources.gmailNoFocus;
             this.gmailLink.Size = new System.Drawing.Size(75, 64);
             this.gmailLink.TabIndex = 9;
             this.gmailLink.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.aboutToolTip.SetToolTip(this.gmailLink, "Click to copy my email.");
             this.gmailLink.UseCustomBackColor = true;
             this.gmailLink.UseSelectable = true;
             this.gmailLink.Click += new System.EventHandler(this.gmailLink_Click);
@@ -114,7 +117,7 @@
             this.pictureBox1.Image = global::PassKey.Properties.Resources.iconLarge;
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 67);
+            this.pictureBox1.Location = new System.Drawing.Point(31, 67);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(99, 104);
             this.pictureBox1.TabIndex = 3;
@@ -134,6 +137,12 @@
             this.closeLink.UseCustomBackColor = true;
             this.closeLink.UseSelectable = true;
             this.closeLink.Click += new System.EventHandler(this.closeLink_Click);
+            // 
+            // aboutToolTip
+            // 
+            this.aboutToolTip.Style = MetroFramework.MetroColorStyle.Blue;
+            this.aboutToolTip.StyleManager = null;
+            this.aboutToolTip.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
             // AboutForm
             // 
@@ -172,5 +181,6 @@
         private MetroFramework.Controls.MetroLink gmailLink;
         private MetroFramework.Controls.MetroLink githubLink;
         private MetroFramework.Controls.MetroLink closeLink;
+        private MetroFramework.Components.MetroToolTip aboutToolTip;
     }
 }
